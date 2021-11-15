@@ -2,31 +2,29 @@ mixin menu-toggle()
 	+b.toggle-menu-mobile--js
 		span
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+mnu()
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
+			+e.row.row.align-items-center
+				.col-auto
+					+e.logo(href="#")
+						img(loading="lazy" src="img/svg/logo.svg" alt="")
 				.col-auto.d-lg-none
 					+menu-toggle()
 				.col
 					.menu-mobile.menu-mobile--js
 						+menu-toggle()
 						+mnu()
-					
+				.col-auto
+					+e.btn(href="#")
+						+icon('user')
+						span Войти
 	// end top-nav

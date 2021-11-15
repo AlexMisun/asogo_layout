@@ -94,56 +94,35 @@ const JSCCommon = {
 	// /mobileMenu
 
 	// tabs  .
-	tabscostume(tab) {
-		// const tabs = document.querySelectorAll(tab);
-		// const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
-		// tabs.forEach(element => {
-		// 	let tabs = element;
-		// 	const tabsCaption = tabs.querySelector(".tabs__caption");
-		// 	const tabsBtn = tabsCaption.querySelectorAll(".tabs__btn");
-		// 	const tabsWrap = tabs.querySelector(".tabs__wrap");
-		// 	const tabsContent = tabsWrap.querySelectorAll(".tabs__content");
-		// 	const random = Math.trunc(Math.random() * 1000);
-		// 	tabsBtn.forEach((el, index) => {
-		// 		const data = `tab-content-${random}-${index}`;
-		// 		el.dataset.tabBtn = data;
-		// 		const content = tabsContent[index];
-		// 		content.dataset.tabContent = data;
-		// 		if (!content.dataset.tabContent == data) return;
+	tabscostume() {
+		//ultimate tabs
+		let cTabs = document.querySelectorAll('.tabs');
+		for (let tab of cTabs){
+			let Btns = tab.querySelectorAll('.tabs__btn')
+			let contentGroups = tab.querySelectorAll('.tabs__wrap');
 
-		// 		const active = content.classList.contains('active') ? 'active' : '';
-		// 		// console.log(el.innerHTML);
-		// 		content.insertAdjacentHTML("beforebegin", `<div class="tabs__btn-accordion  btn btn-primary  mb-1 ${active}" data-tab-btn="${data}">${el.innerHTML}</div>`)
-		// 	})
+			for (let btn of Btns){
+				btn.addEventListener('click', function (){
 
+					for (let btn of Btns){
+						btn.classList.remove('active');
+					}
+					this.classList.add('active');
 
-		// 	tabs.addEventListener('click', function (element) {
-		// 		const btn = element.target.closest(`[data-tab-btn]:not(.active)`);
-		// 		if (!btn) return;
-		// 		const data = btn.dataset.tabBtn;
-		// 		const tabsAllBtn = this.querySelectorAll(`[data-tab-btn`);
-		// 		const content = this.querySelectorAll(`[data-tab-content]`);
-		// 		tabsAllBtn.forEach(element => {
-		// 			element.dataset.tabBtn == data
-		// 				? element.classList.add('active')
-		// 				: element.classList.remove('active')
-		// 		});
-		// 		content.forEach(element => {
-		// 			element.dataset.tabContent == data
-		// 				? (element.classList.add('active'), element.previousSibling.classList.add('active'))
-		// 				: element.classList.remove('active')
-		// 		});
-		// 	})
-		// })
+					let index = [...Btns].indexOf(this);
+					//-console.log(index);
 
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
+					for (let cGroup of contentGroups){
+						let contentItems = cGroup.querySelectorAll('.tabs__content');
 
-		});
-
+						for (let item of contentItems){
+							item.classList.remove('active');
+						}
+						contentItems[index].classList.add('active');
+					}
+				})
+			}
+		}
 	},
 	// /tabs
 
@@ -214,43 +193,30 @@ const JSCCommon = {
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		}, { passive: true });
 	},
-	animateScroll() {
-		$(document).on('click', " .menu li a, .scroll-link", function () {
-			const elementClick = $(this).attr("href");
-			if (!document.querySelector(elementClick)) {
-				$(this).attr("href", '/' + elementClick)
-			}
-			else {
-				let destination = $(elementClick).offset().top;
-				$('html, body').animate({ scrollTop: destination - 80 }, 0);
-				return false;
+	//pure js
+	animateScroll(topShift=80) {
+		document.addEventListener('click', function (){
+			if (event.target.closest('.menu li a, .scroll-link')) {
+				let self = event.target.closest('.menu li a, .scroll-link');
+				event.preventDefault();
+
+				let targetSelector = self.getAttribute('href');
+				let target = document.querySelector(targetSelector);
+
+				if (!target) {
+					self.setAttribute("href", '/' + targetSelector);
+				}
+				else{
+					event.preventDefault();
+					let targetTop = target.offsetTop;
+					window.scrollTo({
+						top: targetTop - topShift,
+						behavior: "smooth",
+					});
+				}
+
 			}
 		});
-	},
-	getCurrentYear(el) {
-		let now = new Date();
-		let currentYear = document.querySelector(el);
-		if (currentYear) currentYear.innerText = now.getFullYear();
-	},
-	toggleShow(toggle, drop) {
-
-		let catalogDrop = drop;
-		let catalogToggle = toggle;
-
-		$(document).on('click', catalogToggle, function () {
-			$(this).toggleClass('active').next().fadeToggle('fast', function () {
-				$(this).toggleClass("active")
-			});
-		})
-
-		document.addEventListener('mouseup', (event) => {
-			let container = event.target.closest(catalogDrop + ".active"); // (1)
-			let link = event.target.closest(catalogToggle); // (1)
-			if (!container || !catalogToggle) {
-				$(catalogDrop).removeClass('active').fadeOut();
-				$(catalogToggle).removeClass('active');
-			};
-		}, { passive: true });
 	},
 	makeDDGroup() {
 		let parents = document.querySelectorAll('.dd-group-js');
@@ -287,13 +253,12 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	// JSCCommon.tabscostume();
 	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
-	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 	
 	// JSCCommon.CustomInputFile(); 
@@ -304,28 +269,21 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
+	//luckyOne Js
+	let headerH;
+	let header = document.querySelector(".header--js");
+	function calcHeaderHeight() {
+		if (!header) return;
+		document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
+		headerH = header.offsetHeight;
 
-	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
-		if (!topNav) return;
 		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
+			? header.classList.add('fixed')
+			: header.classList.remove('fixed');
 	}
-
-	function whenResize() {
-		setFixedNav();
-	}
-
-	window.addEventListener('scroll', () => {
-		setFixedNav();
-
-	}, { passive: true })
-	window.addEventListener('resize', () => {
-		whenResize();
-	}, { passive: true });
-
-	whenResize();
+	window.addEventListener('resize', calcHeaderHeight, { passive: true });
+	window.addEventListener('scroll', calcHeaderHeight, { passive: true });
+	calcHeaderHeight();
 
 
 	let defaultSl = {
@@ -334,7 +292,6 @@ function eventHandler() {
 			loadPrevNext: true,
 		},
 		watchOverflow: true,
-		spaceBetween: 0,
 		loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -350,16 +307,18 @@ function eventHandler() {
 		},
 	}
 
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
+	let freeMomentum = {
 		slidesPerView: 'auto',
 		freeMode: true,
 		loopFillGroupWithBlank: true,
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
+	};
 
+	let defSlider = new Swiper('selector', {
+		...defaultSl,
+		...freeMomentum,
 	});
 	// modal window
 
@@ -369,11 +328,3 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
