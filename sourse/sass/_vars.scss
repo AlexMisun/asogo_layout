@@ -42,8 +42,10 @@ $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
+$gray-710: #575757;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
+$gray-910: #010B23;
 $black: #000 !default;
 // scss-docs-end gray-color-variables
 
@@ -63,6 +65,7 @@ $grays: ("100": $gray-100,
 
 // scss-docs-start color-variables
 $blue: #123295;
+$blue2: #9FB1E8;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
@@ -72,6 +75,7 @@ $yellow: #ffc107 !default;
 $green: #198754 !default;
 $teal: #20c997 !default;
 $cyan: #0dcaf0 !default;
+
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -208,7 +212,7 @@ $position-values: (0: 0,
 // Settings for the `<body>` element.
 
 $body-bg: $white !default;
-$body-color: $gray-900 !default;
+$body-color: $black;
 $body-text-align: null !default;
 
 // Utilities maps
@@ -405,8 +409,8 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
+$h1-font-size: rem(76);
+$h2-font-size: rem(54);
 $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
@@ -426,9 +430,9 @@ $font-sizes: (1: $h1-font-size,
 $headings-margin-bottom: $spacer * .5 !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
-$headings-font-weight: 500 !default;
+$headings-font-weight: 400;
 $headings-line-height: 1.2 !default;
-$headings-color: null !default;
+$headings-color: $primary;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings

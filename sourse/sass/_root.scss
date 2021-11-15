@@ -1,20 +1,20 @@
 :root {
   --animate-delay: 1.2s;
 
-	--sPT: #{rem(40)};
-	--sPB: #{rem(45)};
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
 	--sTPB: #{rem(30)};
   @include media-breakpoint-up(md) {
-    --sPT: #{rem(80)};
-    --sPB: #{rem(90)};
+    --sPT: #{rem(45)};
+    --sPB: #{rem(50)};
     --sTPB: #{rem(40)};
   }
 
 
+  //@include media-breakpoint-up(lg){
+  //  --bs-body-font-size: 14px;
+  //}
   --bs-body-font-size: 14px;
-  @include media-breakpoint-up(md){
-    --bs-body-font-size: 15px;
-  }
   @include media-breakpoint-up(xl){
     --bs-body-font-size: #{$em-base};
   }

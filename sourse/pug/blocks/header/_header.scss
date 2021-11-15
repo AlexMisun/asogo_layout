@@ -3,6 +3,10 @@
 	position: fixed;
 	//-position: absolute;
 
+	&.fixed{
+		--tn-box-shdw-opacity: .4;
+	}
+
 	z-index: 900;
 	top: 0;
 	left: 0;

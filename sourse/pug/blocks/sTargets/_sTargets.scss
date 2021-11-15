@@ -1,0 +1,65 @@
+// start .sTargets
+.sTargets {
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(44)};
+		--sPB: #{rem(50)};
+		--sTPB: #{rem(66)};
+	}
+
+	.section-title{
+		h2{
+
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: #{rem(40)};
+
+		@include media-breakpoint-up(base){
+			--bs-gutter-x: #{rem(16)};
+		}
+	}
+	&__col{
+		@include media-breakpoint-up(xl){
+			width: 20% !important;
+		}
+	}
+	&__item{
+		@include media-breakpoint-up(xxl){
+			max-width: rem(249);
+		}
+	}
+	&__img{
+		img{
+			width: rem(40);
+			height: auto;
+		}
+
+		position: relative;
+		border-bottom: 1px solid rgba($blue2, .5);
+		padding-bottom: rem(31);
+		margin-bottom: rem(31);
+
+		&:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -1px;
+			width: 40%;
+			height: 1px;
+			background-color: $blue2;
+		}
+
+	}
+	&__content{
+		line-height: 1.7;
+
+		@include media-breakpoint-up(base){
+			margin-right: rem(-15);
+		}
+	}
+
+	//-
+	&__{}
+	&__{}
+} // end.sTargets

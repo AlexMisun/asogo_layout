@@ -9,7 +9,7 @@
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	// opacity: 0.7;
+	//opacity: 0.7;
 } 
 
 body,
@@ -106,6 +106,20 @@ body {
 }
 
 .section-title {
+	&:last-child{
+		padding-bottom: 0;
+	}
+
+	h1, h2{
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(xxl){
+			margin-bottom: rem(40);
+		}
+		@include media-breakpoint-up(base){
+			margin-bottom: rem(64);
+		}
+	}
+
 	padding-bottom: var(--sTPB);
 	& > *:last-child{
 		margin-bottom: 0!important;
@@ -488,4 +502,60 @@ iframe {
 		left: 0;
 		object-fit: cover;
 	}
+}
+
+//
+.page-head{
+	padding: rem(24) 0;
+	@include media-breakpoint-up(xl){
+		padding: rem(30) 0;
+	}
+	@include media-breakpoint-up(base){
+		padding: rem(40) 0 rem(46) 2px;
+	}
+}
+.breadcrumb{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+
+	.breadcrumb-item{
+		display: flex;
+		align-items: center;
+		&:after{
+			font-size: rem(12);
+			content: '';
+			display: inline-block;
+			flex-shrink: 0;
+
+			width: rem(16);
+			height: rem(16);
+			margin: 0 rem(15.5);
+			background-color: $blue2;
+			border-radius: rem(4);
+
+			background-image: url(../img/svg/chevron-r.svg);
+			background-repeat: no-repeat;
+			background-size: 2px;
+			background-position: center;
+		}
+
+		a{
+			font-size: rem(12);
+		}
+
+		&:last-child{
+			pointer-events: none;
+			&:after{
+				content: none;
+			}
+
+			a{
+				color: $gray-710;
+			}
+		}
+	}
+
 }

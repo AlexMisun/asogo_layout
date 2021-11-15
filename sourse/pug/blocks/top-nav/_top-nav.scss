@@ -1,14 +1,32 @@
 .top-nav {
 	color: $white;
 	background: $primary;
-	padding: rem(49.5) 0;
+	box-shadow: 0 0 10px 0 rgba($black, var(--tn-box-shdw-opacity, 0));
+
+	padding: rem(20) 0;
+	@include media-breakpoint-up(xxl){
+		padding: rem(30) 0;
+	}
+	@include media-breakpoint-up(base){
+		padding: 46px 0 rem(49);
+	}
+
+	//-
+	&__container{
+		@include media-breakpoint-up(base){
+			padding-right: calc(10px + #{$container-padding-x});
+		}
+	}
 
 	&__logo{
 		display: block;
 		width: rem(128);
 
+		@include media-breakpoint-up(xxl){
+			margin-right: rem(30);
+		}
 		@include media-breakpoint-up(base){
-			margin-right: 98px;
+			margin-right: rem(91);
 		}
 
 		img{
@@ -27,7 +45,10 @@
 		flex-wrap: wrap;
 
 		.menu-item{
-			margin-right: rem(32);
+			margin-right: rem(24);
+			@include media-breakpoint-up(xl){
+				margin-right: rem(32.5);
+			}
 			&:last-child{
 				margin-right: 0;
 			}
@@ -37,6 +58,10 @@
 				padding: rem(6) 0;
 				white-space: nowrap;
 				border-top: 1px solid transparent;
+
+				font-size: rem(14);
+				line-height: calc(17/14);
+
 
 				border-bottom: 1px solid transparent;
 				&:hover{
@@ -49,13 +74,21 @@
 	&__btn{
 		@extend .btn;
 		@extend .btn-outline-white;
+		border-radius: rem(4);
+		padding: rem(7) rem(10);
 
 		display: flex;
 		align-items: center;
-
 		.icon{
-
+			flex-shrink: 0;
+			@include mt();
+			font-size: rem(15);
+			margin-right: rem(10);
+			color: currentColor;
 		}
+
+		font-size: rem(14);
+		line-height: calc(17/14);
 	}
 	&__{}
 	&__{}

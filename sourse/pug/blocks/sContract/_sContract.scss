@@ -1,0 +1,101 @@
+// start .sContract
+.sContract {
+	--sTPB: #{rem(0)};
+
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(82)};
+		--sPB: #{rem(50)};
+	}
+	@include media-breakpoint-down(md){
+		background: $primary;
+		color: $white;
+	}
+
+	&__box{
+		@include media-breakpoint-up(md){
+			padding: rem(48) rem(32);
+		}
+		@include media-breakpoint-up(xl){
+			padding: rem(60) rem(40);
+		}
+		@include media-breakpoint-up(base){
+			padding: rem(104) rem(136) rem(122);
+			max-width: calc(100% - 11px);
+		}
+		position: relative;
+		z-index: 1;
+		color: $white;
+		background: $primary;
+	}
+	&__bg{
+		position: absolute;
+		z-index: -2;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			object-position: right center;
+		}
+	}
+
+	.section-title{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: 0;
+			max-width: 47%;
+		}
+		text-shadow: 0 0 1px $primary;
+
+		h2{
+			font-size: rem(32);
+			@include media-breakpoint-up(xxl){
+				font-size: rem(40);
+			}
+			line-height: 1.2;
+			color: $white;
+			margin-bottom: rem(37);
+		}
+		p{
+			max-width: 92%;
+			font-size: rem(16);
+			line-height: 1.7;
+			color: $white;
+		}
+	}
+	&__img{
+		@include media-breakpoint-up(lg){
+			position: absolute;
+			z-index: -2;
+
+			top: rem(-43);
+			right: rem(40);
+			width: rem(583 * 0.9);
+			height: rem(670 * 0.9);
+		}
+		@include media-breakpoint-up(xxl){
+			top: rem(-43);
+			right: rem(70);
+			width: rem(583);
+			height: rem(670);
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			filter: drop-shadow(0px 14px 47px rgba(0, 0, 0, 0.25));
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__{}
+	&__{}
+} // end.sContract

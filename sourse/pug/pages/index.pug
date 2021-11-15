@@ -3,6 +3,11 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sTargets/_sTargets.pug
+include ../blocks/sControll/_sControll.pug
+include ../blocks/sContract/_sContract.pug
+include ../blocks/sMembers/_sMembers.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -12,16 +17,15 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-	//- +mob-mnu()
+	+mob-mnu()
 	+header()
 		+top-nav()
-	+topLine()
-	.container
-		.swiper-wrapper
-			.swiper-slide 1
-			.swiper-slide 2
-			.swiper-slide 3
-	+headerBlock()
-	+sForm()
-	+sContact()
+	+b.page-head
+		.container
+			+breadcrumb('АСОГО', 'Об АСОГО')
+	+sAbout()
+	+sTargets()
+	+sControll()
+	+sContract()
+	+sMembers()
 	+footer()

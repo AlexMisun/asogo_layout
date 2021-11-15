@@ -1,0 +1,48 @@
+mixin sControll(data)
+	// start sControll
+	+b.SECTION.sControll.section#sControll&attributes(attributes)
+		.container
+			+b.section-title.text-center.text-lg-start
+				h2 Органы управления и контроля АСОГО
+			+e.row.row
+				.col-lg-4
+					+sControllCard({
+						cardClasses: 'filled up-lg-right',
+						title: 'Органы управления Ассоциации',
+						descr: '',
+					})
+				.col-lg-4
+					+sControllCard({
+						cardClasses: '',
+						title: 'Высший орган управления',
+						descr: 'Общее собрание членов Ассоциации',
+					})
+					+sControllCard({
+						cardClasses: '',
+						title: 'Постоянно действующий коллегиальный орган управления ',
+						descr: 'Совет Ассоциации',
+					})
+					+sControllCard({
+						cardClasses: '',
+						title: 'Единоличный исполнительный орган',
+						descr: 'Исполнительный директор Ассоциации',
+					})
+				.col-lg-4
+					+sControllCard({
+						cardClasses: 'filled',
+						title: 'Органы контроля Ассоциации',
+						descr: '',
+					})
+					+sControllCard({
+						cardClasses: '',
+						title: 'Ревизионная комиссия',
+						descr: 'Ревизор',
+					})
+
+	// end sControll
+
+mixin sControllCard(data)
+	+e.card(class=`${data.cardClasses || ''}`)
+		+e.title=data.title
+		if data.descr
+			+e.descr=data.descr

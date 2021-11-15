@@ -1,0 +1,58 @@
+// start .sMembers
+.sMembers {
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(82)};
+		--sPB: #{rem(114)};
+		--sTPB: #{rem(40)};
+	}
+
+	.section-title{
+		h2{
+
+		}
+	}
+	&__row{
+		//--bs-gutter-x: #{rem(74)};
+		--bs-gutter-x: #{rem(15)};
+		--bs-gutter-y: #{rem(30)};
+	}
+	&__title{
+		font-size: rem(18);
+		@include media-breakpoint-up(lg){
+			min-height: rem(50);
+			font-size: rem(16);
+		}
+		@include media-breakpoint-up(xxl){
+			font-size: rem(18);
+		}
+		@include media-breakpoint-up(base){
+			max-width: 90%;
+		}
+
+		line-height: 1.4;
+		margin-bottom: rem(13);
+		color: rgba($gray-710, .5);
+	}
+	&__links{
+		&--3{
+			@include media-breakpoint-up(sm){
+				columns: 2;
+			}
+			@include media-breakpoint-up(md){
+				columns: 3;
+			}
+		}
+		&--1{}
+
+		a{
+			display: block;
+			font-size: rem(14);
+			margin-bottom: rem(8);
+			line-height: 1.4;
+			//color: #123295;
+		}
+	}
+	//
+	&__{}
+	&__{}
+} // end.sMembers

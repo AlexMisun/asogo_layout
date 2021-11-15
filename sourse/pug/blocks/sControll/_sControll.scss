@@ -1,0 +1,125 @@
+// start .sControll
+.sControll {
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(38)};
+		--sPB: #{rem(50)};
+		--sTPB: #{rem(62)};
+	}
+
+	//-
+	.section-title{
+		h2{
+
+		}
+	}
+	&__row{
+		--bs-gutter-y: #{rem(78)};
+		//rem(78)
+	}
+	&__card{
+		text-align: center;
+		//min-height: rem(115);
+		@include media-breakpoint-up(lg){
+			text-align: left;
+			min-height: rem(183);
+			max-width: 73%;
+		}
+
+		border: 1px dashed rgba($blue2, 1);
+		padding: rem(23);
+		&.filled{
+			border: 1px solid rgba($blue2, .1);
+			background-color: rgba($blue2, .1);
+
+			@include media-breakpoint-up(lg){
+				padding: rem(32) rem(40);
+			}
+			@include media-breakpoint-up(base){
+				padding: rem(32) rem(140) rem(32) rem(40);
+			}
+
+			--title-fw: 400;
+			--title-mw: #{rem(218)};
+			--title-fs: #{rem(24)};
+		}
+
+		//-
+		position: relative;
+		margin-bottom: var(--bs-gutter-y);
+		&:not(.up-lg-right):last-child{
+			&:before{
+				content: none;
+			}
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		//-
+		&:before{
+			content: '';
+			height: rem(41.25);
+			width: rem(40);
+			display: block;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: calc(100% + #{rem(16)});
+
+			background-image: url(../img/svg/arrow-d.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+		&.up-lg-right{
+			&:after{
+				@include media-breakpoint-up(lg){
+					content: '';
+				}
+				position: absolute;
+				z-index: 1;
+
+				@include media-breakpoint-up(lg){
+					width: rem(80);
+				}
+				@include media-breakpoint-up(xxl){
+					width: rem(100);
+				}
+				@include media-breakpoint-up(base){
+					width: rem(124);
+				}
+				height: rem(40);
+				top: 50%;
+				transform: translateY(-50%);
+				left: calc(100% + #{rem(16)});
+
+				background-image: url(../img/svg/arrow-r.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+		}
+	}
+	&__title{
+		font-weight: var(--title-fw, 500);
+		font-size: var(--title-fs, #{rem(20)});
+		line-height: 1.7;
+		color: $primary;
+
+		@include media-breakpoint-up(lg){
+			max-width: var(--title-mw, #{rem(260)});
+		}
+
+		margin-bottom: rem(16);
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__descr{
+		font-size: rem(14);
+		line-height: calc(17/14);
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sControll

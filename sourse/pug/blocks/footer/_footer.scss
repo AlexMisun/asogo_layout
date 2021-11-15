@@ -1,43 +1,140 @@
 .footer {
-		
 	margin-top: auto;
 
-// 
-@include media-breakpoint-up(xl) {}
+	&__container{
+		@include media-breakpoint-up(base){
+			padding-right: rem(25);
+		}
+		&:before{
+			content: '';
+			display: block;
 
-@include media-breakpoint-up(lg) {}
+			border-top: 1px solid rgba($blue2, .5);
 
-@include media-breakpoint-up(md) {}
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(sm){
+				margin-bottom: rem(40);
+			}
+			@include media-breakpoint-up(base){
+				margin-bottom: rem(87);
+			}
+		}
+	}
+	&__row{
+		--bs-gutter-y: #{rem(30)};
 
-@include media-breakpoint-up(sm) {}
+		--bs-gutter-x: #{rem(24)};
+		margin-bottom: rem(30px);
+		@include media-breakpoint-up(lg){
+			--bs-gutter-x: #{rem(40)};
+			margin-bottom: rem(40px);
+		}
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: #{rem(60)};
+			margin-bottom: rem(80px);
+		}
+		@include media-breakpoint-up(base){
+			--bs-gutter-x: #{rem(24)};
+			margin-bottom: rem(109px);
+		}
+	}
+	&__col{
+		@include media-breakpoint-between(xl, base){
+			max-width: 28% !important;
+		}
+	}
+	&__menu{
+		ul{
+			padding: 0;
+			margin: 0 rem(-10) 0 0;
+			list-style: none;
 
-@include media-breakpoint-up(xs) {}
+			li{
+				margin-bottom: rem(8);
+				@include media-breakpoint-up(md){
+					margin-bottom: rem(12);
+				}
+				@include media-breakpoint-up(xxl){
+					margin-bottom: rem(21);
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
 
+				a{
+					@include media-breakpoint-up(xxl){
+						font-size: rem(18);
+					}
+					line-height: calc(22/18);
+					color: $gray-710;
+				}
+			}
+		}
+	}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+	//-
+	&__tell{
+		display: inline-block;
+		font-size: rem(32);
+		line-height: 1;
+		color: $gray-910;
 
+		margin-bottom: rem(18);
 
-// 
-@include media-breakpoint-only(xs) {}
+		@include media-breakpoint-up(base){
+			position: relative;
+			top: -4px;
+		}
+	}
+	&__mail{
+		display: inline-block;
+		font-size: rem(18);
+		line-height: 1.2;
+		color: $blue;
 
-@include media-breakpoint-only(sm) {}
+		margin-bottom: rem(32);
+	}
+	&__address{
+		font-size: rem(14);
+		line-height: 1.2;
+		color: $gray-710;
+	}
 
-@include media-breakpoint-only(md) {}
+	//-
+	&__bot{
+		padding: 0 0 rem(30) 0;
+		@include media-breakpoint-up(xxl){
+			padding:0 0 rem(40) 0;
+		}
+		@include media-breakpoint-up(base){
+			padding: 0 0 rem(69);
+		}
+		&:before{
+			content: '';
+			display: block;
 
-@include media-breakpoint-only(lg) {}
-
-@include media-breakpoint-only(xl) {}
-
-
-// 
-@include media-breakpoint-down(xl) {}
-
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+			border-top: 1px solid rgba($blue2, .5);
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(xl){
+				margin-bottom: rem(40);
+			}
+			@include media-breakpoint-up(base){
+				margin-bottom: rem(69);
+			}
+		}
+	}
+	&__bot-row{
+		--bs-gutter-y: 10px;
+	}
+	&__all-rights{
+		font-size: rem(14);
+		line-height: calc(17/14);
+		color: $gray-710;
+	}
+	&__policy{
+		font-size: rem(14);
+		line-height: 1.2;
+	}
+	&__{}
+	&__{}
 }
