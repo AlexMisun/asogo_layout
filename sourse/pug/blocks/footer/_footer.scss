@@ -1,6 +1,10 @@
 .footer {
 	margin-top: auto;
 
+	&.has-bt{
+		--bt-color: #{rgba($blue2, .5)};
+	}
+
 	&__container{
 		@include media-breakpoint-up(base){
 			padding-right: rem(25);
@@ -9,14 +13,17 @@
 			content: '';
 			display: block;
 
-			border-top: 1px solid rgba($blue2, .5);
+			border-top: 1px solid var(--bt-color, transparent);
 
-			margin-bottom: rem(30);
-			@include media-breakpoint-up(sm){
-				margin-bottom: rem(40);
+			margin-bottom: rem(25);
+			@include media-breakpoint-up(md){
+				margin-bottom: rem(34);
+			}
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(60);
 			}
 			@include media-breakpoint-up(base){
-				margin-bottom: rem(87);
+				margin-bottom: rem(117);
 			}
 		}
 	}
@@ -31,11 +38,10 @@
 		}
 		@include media-breakpoint-up(xxl){
 			--bs-gutter-x: #{rem(60)};
-			margin-bottom: rem(80px);
+			margin-bottom: rem(78px);
 		}
 		@include media-breakpoint-up(base){
 			--bs-gutter-x: #{rem(24)};
-			margin-bottom: rem(109px);
 		}
 	}
 	&__col{
@@ -50,10 +56,7 @@
 			list-style: none;
 
 			li{
-				margin-bottom: rem(8);
-				@include media-breakpoint-up(md){
-					margin-bottom: rem(12);
-				}
+				margin-bottom: rem(17);
 				@include media-breakpoint-up(xxl){
 					margin-bottom: rem(21);
 				}
@@ -62,10 +65,15 @@
 				}
 
 				a{
+					font-size: rem(14);
+					line-height: calc(17/14);
+					@include media-breakpoint-up(lg){
+						font-size: rem(16);
+						line-height: calc(22/18);
+					}
 					@include media-breakpoint-up(xxl){
 						font-size: rem(18);
 					}
-					line-height: calc(22/18);
 					color: $gray-710;
 				}
 			}
@@ -75,11 +83,22 @@
 	//-
 	&__tell{
 		display: inline-block;
-		font-size: rem(32);
-		line-height: 1;
 		color: $gray-910;
 
-		margin-bottom: rem(18);
+		font-size: rem(24);
+		margin-bottom: rem(12);
+		@include media-breakpoint-up(md){
+			margin-top: 5px;
+			margin-bottom: rem(15);
+			line-height: 1.2;
+			font-size: rem(24);
+		}
+		@include media-breakpoint-up(lg){
+			margin-top: 0;
+			margin-bottom: rem(18);
+			line-height: 1;
+			font-size: rem(32);
+		}
 
 		@include media-breakpoint-up(base){
 			position: relative;
@@ -88,14 +107,27 @@
 	}
 	&__mail{
 		display: inline-block;
-		font-size: rem(18);
+
+		font-size: rem(14);
+		margin-bottom: rem(22);
+		@include media-breakpoint-up(lg){
+			font-size: rem(18);
+			margin-bottom: rem(32);
+		}
 		line-height: 1.2;
 		color: $blue;
 
-		margin-bottom: rem(32);
 	}
 	&__address{
-		font-size: rem(14);
+		max-width: 223px;
+		@include media-breakpoint-up(sm){
+			max-width: 100%;
+		}
+
+		font-size: rem(12);
+		@include media-breakpoint-up(lg){
+			font-size: rem(14);
+		}
 		line-height: 1.2;
 		color: $gray-710;
 	}
@@ -114,7 +146,7 @@
 			display: block;
 
 			border-top: 1px solid rgba($blue2, .5);
-			margin-bottom: rem(30);
+			margin-bottom: rem(23);
 			@include media-breakpoint-up(xl){
 				margin-bottom: rem(40);
 			}
@@ -127,13 +159,27 @@
 		--bs-gutter-y: 10px;
 	}
 	&__all-rights{
-		font-size: rem(14);
-		line-height: calc(17/14);
+		max-width: 90%;
+		@include media-breakpoint-up(sm){
+			max-width: 100%;
+		}
+
+		font-size: rem(10);
+		line-height: 1.2;
+		@include media-breakpoint-up(lg){
+			font-size: rem(14);
+			line-height: calc(17/14);
+		}
 		color: $gray-710;
 	}
 	&__policy{
-		font-size: rem(14);
+		display: inline-block;
+		font-size: rem(10);
 		line-height: 1.2;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(14);
+			line-height: 1.2;
+		}
 	}
 	&__{}
 	&__{}

@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sTargets/_sTargets.pug
+include ../blocks/sControll/_sControll.pug
+include ../blocks/sContract/_sContract.pug
+include ../blocks/sMembers/_sMembers.pug
+
+block variables
+	- let  mainPage= ''
+	- let  bg='01.png'
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+b.page-head
+		.container
+			+breadcrumb('АСОГО', 'Об АСОГО')
+	+sAbout()
+	+sTargets()
+	+sControll()
+	+sContract()
+	+sMembers({
+
+	})
+	+footer()(class="has-bt")

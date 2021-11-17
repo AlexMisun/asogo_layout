@@ -3,24 +3,86 @@
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(82)};
 		--sPB: #{rem(114)};
-		--sTPB: #{rem(40)};
+		--sTPB: #{rem(36)};
 	}
 
+	&--alt{
+		//min-height: calc(var(--vh, 1vh) * 100);
+		@include media-breakpoint-up(xl){
+			min-height: 1001px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		color: $white;
+		--headings-col: #{$white};
+		--title-col: #{rgba($blue2, .5)};
+
+		//
+		--links-hover-col: #{$white};
+		--links-col: #{$white};
+
+		--sPT: #{rem(29)};
+		--sPB: #{rem(25)};
+		--sTPB: #{rem(19)};
+		@include media-breakpoint-up(md) {
+			--sPT: #{rem(31px)};
+			--sPB: #{rem(35)};
+			--sTPB: #{rem(34)};
+		}
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(80)};
+			--sPB: #{rem(134)};
+			--sTPB: #{rem(40)};
+		}
+	}
+
+	//-
+
+	position: relative;
+	z-index: 1;
+	&__bg{
+		background-color: $primary;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		img{
+			object-fit: cover;
+			width: auto;
+			height: 100%;
+		}
+	}
 	.section-title{
 		h2{
-
+			color: var(--headings-col, #{$primary});
 		}
 	}
 	&__row{
-		//--bs-gutter-x: #{rem(74)};
 		--bs-gutter-x: #{rem(15)};
-		--bs-gutter-y: #{rem(30)};
+		--bs-gutter-y: #{rem(24)};
+		@include media-breakpoint-between(md,lg){
+			--bs-gutter-y: #{rem(63)};
+		}
 	}
 	&__title{
-		font-size: rem(18);
+		font-size: rem(16);
+
+		margin-bottom: rem(18);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(20);
+		}
 		@include media-breakpoint-up(lg){
 			min-height: rem(50);
-			font-size: rem(16);
+			margin-bottom: rem(13);
 		}
 		@include media-breakpoint-up(xxl){
 			font-size: rem(18);
@@ -30,15 +92,15 @@
 		}
 
 		line-height: 1.4;
-		margin-bottom: rem(13);
-		color: rgba($gray-710, .5);
+		//color: rgba($gray-710, .5);
+		color: var(--title-col, #{rgba($gray-710, .5)});
 	}
 	&__links{
 		&--3{
 			@include media-breakpoint-up(sm){
 				columns: 2;
 			}
-			@include media-breakpoint-up(md){
+			@include media-breakpoint-up(lg){
 				columns: 3;
 			}
 		}
@@ -46,9 +108,18 @@
 
 		a{
 			display: block;
-			font-size: rem(14);
+
+			font-size: rem(12);
+			@include media-breakpoint-up(lg){
+				font-size: rem(14);
+			}
 			margin-bottom: rem(8);
 			line-height: 1.4;
+			color: var(--links-col, #{$primary});
+			&:hover{
+				color: var(--links-hover-col, #{$primary});
+			}
+
 			//color: #123295;
 		}
 	}

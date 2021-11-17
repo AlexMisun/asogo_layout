@@ -1,14 +1,16 @@
 .top-nav {
+	@include mt();
 	color: $white;
-	background: $primary;
+	background: var(--tn-bg, #{$primary});
 	box-shadow: 0 0 10px 0 rgba($black, var(--tn-box-shdw-opacity, 0));
 
-	padding: rem(20) 0;
-	@include media-breakpoint-up(xxl){
-		padding: rem(30) 0;
-	}
+	//padding: rem(16) 0;
+	//@include media-breakpoint-up(lg){
+	//	padding: rem(20) 0;
+	//}
+	padding: rem(24) 0;
 	@include media-breakpoint-up(base){
-		padding: 46px 0 rem(49);
+		padding: var(--tn-pt, 46px 0 49px);
 	}
 
 	//-
@@ -18,9 +20,19 @@
 		}
 	}
 
+	&__row{
+		--bs-gutter-x: #{rem(20)};
+		@include media-breakpoint-up(sm){
+			--bs-gutter-x: #{rem(24)};
+		}
+	}
 	&__logo{
 		display: block;
-		width: rem(128);
+
+		width: rem(104);
+		@include media-breakpoint-up(sm){
+			width: rem(128);
+		}
 
 		@include media-breakpoint-up(xxl){
 			margin-right: rem(30);

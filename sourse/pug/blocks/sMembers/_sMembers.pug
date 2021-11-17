@@ -1,6 +1,8 @@
 mixin sMembers(data)
 	// start sMembers
-	+b.SECTION.sMembers.section#sMembers&attributes(attributes)
+	+b.SECTION.sMembers.section#sMembers(class=`${data.addClasses || ''}`)&attributes(attributes)
+		if data.bg
+			+pic('sMembers-bg.png')(class="sMembers__bg")
 		.container
 			+b.section-title
 				h2 Члены АСОГО

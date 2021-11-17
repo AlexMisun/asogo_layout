@@ -4,7 +4,13 @@ mixin sTargets(data)
 		.container
 			+b.section-title
 				h2 Цели создания Ассоциации
-			+e.row.row
+			+targets()
+	// end sTargets
+
+mixin targets(data)
+	+b.target&attributes(attributes)
+		.swiper.target-slider-js
+			.swiper-wrapper
 				+sTargetsItem(1)
 					| Объединяем крупнейшие компании осуществляющие деятельность по строительству объектов газовой отрасли
 				+sTargetsItem(2)
@@ -12,15 +18,14 @@ mixin sTargets(data)
 				+sTargetsItem(3)
 					| Содействуем членам Ассоциации во внедрении единых принципов организации производственных процессов в строительной деятельности газовой отрасли
 				+sTargetsItem(4)
-					|	Координируем деятельности членов Ассоциации с целью стандартизации и унификации применяемых технических решений и технологий
+					|  Координируем деятельности членов Ассоциации с целью стандартизации и унификации применяемых технических решений и технологий
 				+sTargetsItem(5)
 					| Выполняем функции Центрального органа Системы добровольной сертификации ИНТЕРГАЗСЕРТ по направлению «Строительные материалы, работы (услуги)»
-	// end sTargets
 
 mixin sTargetsItem(imgNum)
-	+e.col.col-md-4.col-xl-auto
+	.swiper-slide
 		+e.item
 			+e.img
-				img(loading="lazy" src=`img/svg/sTargets-${imgNum}.svg` alt="")
+				img.img-svg-js(loading="lazy" src=`img/svg/sTargets-${imgNum}.svg` alt="")
 			+e.content
 				block

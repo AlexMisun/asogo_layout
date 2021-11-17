@@ -1,0 +1,35 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 Новости
+			+e.row.row
+				.col-lg-6
+					+bigNewsItem()
+				.col-lg-6
+					+e.slider-wrap
+						.swiper.sNews-slider-js
+							.swiper-wrapper
+								+sNewsSlide('Обучение специалистов служб контроля качества подрядных организаций в 2021 году	')
+								+sNewsSlide('Открыт набор на обучение кандидатов в эксперты по сертификации продукции и работ (услуг)...')
+								+sNewsSlide('Испытательный центр электротехнического и энергетического оборудования прошел процедуру признания компетентности в СДС ИНТЕРГАЗСЕРТ')
+								+sNewsSlide('Открыт набор на обучение специалистов служб контроля качества подрядных организаций c 16 по 20 декабря 2019 года')
+			+e.link(href="#") Все новости
+	// end sNews
+
+mixin sNewsSlide(title)
+	.swiper-slide
+		+sNewsItem(title)
+
+mixin sNewsItem(title)
+	+b.sm-news(href="#")
+		+e.date 09 апреля 2020
+		+e.title=title
+
+mixin bigNewsItem()
+	+b.big-news(href="#")
+		+e.img
+			img(loading="lazy" src="img/@2x/sNews-img.jpg" alt="")
+		+e.date 09 апреля 2020
+		+e.title Обучение специалистов служб контроля качества подрядных организаций в 2021 году

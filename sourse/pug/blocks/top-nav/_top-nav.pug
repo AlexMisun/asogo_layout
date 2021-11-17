@@ -15,6 +15,8 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		+e.container.container
 			+e.row.row.align-items-center
+				.col-auto.d-lg-none
+					+menu-toggle()
 				.col.col-lg-auto
 					+e.logo(href="#")
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
@@ -24,6 +26,4 @@ mixin top-nav()
 					+e.btn(href="#")
 						+icon('user')
 						span Войти
-				.col-auto.d-lg-none
-					+menu-toggle()
 	// end top-nav

@@ -1,7 +1,7 @@
 .toggle-menu-mobile {
-	--h: #{em(2)};
+	--h: 1px;
 	--color: #{$white};
-	--position: calc(var(--h) * 2);
+	--position: 9px;
 	&.on span {
 		--color: transparent;
 	}
@@ -38,8 +38,8 @@
 	span,
 	span:after,
 	span:before {
-		// width: 32px;
-		width: 1em;
+		width: 24px;
+		//width: 1em;
 		height: var(--h);
 		background-color: var(--color);
 		transition: all 0.3s;

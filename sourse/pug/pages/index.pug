@@ -8,10 +8,14 @@ include ../blocks/sTargets/_sTargets.pug
 include ../blocks/sControll/_sControll.pug
 include ../blocks/sContract/_sContract.pug
 include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sOrganisations/_sOrganisations.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sCert/_sCert.pug
+include ../blocks/sPartners/_sPartners.pug
 
 block variables
-	- let  mainPage= 'main-page' 
-	- let  bg='01.png'
+	- let  mainPage= 'main-page'
+	- let  bg='index-320.png'
 
 block title
 	- let  title= 'title'
@@ -20,12 +24,13 @@ block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()
-	+b.page-head
-		.container
-			+breadcrumb('АСОГО', 'Об АСОГО')
-	+sAbout()
-	+sTargets()
-	+sControll()
-	+sContract()
-	+sMembers()
+	+headerBlock()
+	+sMembers({
+		addClasses: 'sMembers--alt',
+		bg: true,
+	})
+	+sOrganisations()
+	+sNews()
+	+sCert()
+	+sPartners()
 	+footer()

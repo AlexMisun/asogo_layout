@@ -1,0 +1,27 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Партнеры
+			+e.row.row
+				.col-lg-3
+					+e.descr АО «Мессояханефтегаз» – совместное предприятие ПАО «Газпром нефть» и ПАО «НК «Роснефть», которому принадлежат лицензии на разведку и разработку группы
+					+e.btn.d-none.d-lg-inline-block(href="#") Стать партнером
+				.col-lg-9.col-xl-8.offset-xl-1
+					+e.items
+						+sPartnersItem(1, 'АО «Мессояханефтегаз» – совместное предприятие ПАО «Газпром нефть» и ПАО «НК «Роснефть», которому принадлежат лицензии на разведку и разработку группы Мессояхских нефтегазоконденсатных месторождений – Восточно-Мессояхского и Западно-Мессояхского	')
+						+sPartnersItem(2, 'ООО «Газпром добыча Ямбург» владеет лицензиями на разведку и добычу углеводородов с уникальных месторождений: Ямбургского и Заполярного.')
+						+sPartnersItem(3, 'ОАО «Грознефтегаз» – нефтегазодобывающее предприятие Компании, ведущее свою деятельность в Северо-Кавказском Федеральном округе России.')
+
+	// end sPartners
+
+mixin sPartnersItem(imgNum, txt)
+	+e.item
+		+e.item-row.row.align-items-center
+			+e.col--img.col-md-auto
+				+e.img(href="#")
+					img(loading="lazy" src=`img/@2x/sPartners-${imgNum}.png` alt="")
+			+e.col--txt.col-md
+				p=txt
+				a(href="sample.com" target="_blank") sample.com

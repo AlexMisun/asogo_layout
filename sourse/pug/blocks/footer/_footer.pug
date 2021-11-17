@@ -1,34 +1,28 @@
 mixin footer()
-	+b.FOOTER.footer
+	+b.FOOTER.footer&attributes(attributes)
 		+e.container.container
 			+e.row.row
-				+e.col.col-md-3.col-lg-auto.col-base-2
+				.col-6.col-md-3.col-base-2
 					+e.menu
 						ul
+							li: a(href="#") Об АСОГО
 							li: a(href="#") Новости
-							li: a(href="#") Карта сайта
-				+e.col.col-md-3.col-lg-auto.col-base-2
+							li: a(href="#") Обучение
+							li: a(href="#") Новости
+				.col-6.col-md-3.col-base-2
 					+e.menu
 						ul
 							li: a(href="#") Пресс-центр
-							li: a(href="#") События
-							li: a(href="#") Структура ЦОС
-							li: a(href="#") Партнеры
-				+e.col.col-md.col-lg-4.col-base-2
-					+e.menu
-						ul
 							li: a(href="#") Членство
-							li: a(href="#") Решения
-							li: a(href="#") Строительная деятельность
-							li: a(href="#") Выставки
-							li: a(href="#") Техническое регулирование и стандартизация
-				.col-lg.text-lg-end
+							li: a(href="#") Сертификация
+							li: a(href="#") Партнеры
+				.col-md.text-md-end
 					div
 						+e.tell(href="tel:84953691224") 8(495) 369-12-24
 					+e.mail(href="#") office@asogo.ru
 					+e.address 119415, г. Москва, проспект Вернадского, д. 41, стр. 1
 			+e.bot
-				+e.bot-row.row
+				+e.bot-row.row.align-items-center
 					.col-md
 						+e.all-rights ©2021 Ассоциация строительных организаций газовой отрасли
 					.col-md-auto

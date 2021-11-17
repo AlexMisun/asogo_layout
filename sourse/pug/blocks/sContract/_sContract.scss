@@ -1,7 +1,7 @@
 // start .sContract
 .sContract {
 	--sTPB: #{rem(0)};
-
+	//
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(82)};
 		--sPB: #{rem(50)};

@@ -1,0 +1,36 @@
+mixin sOrganisations(data)
+	// start sOrganisations
+	+b.sOrganisations.section#sOrganisations&attributes(attributes)
+		+pic('sOrganisations-bg.jpg')(class="sOrganisations__bg")
+		.container
+			+e.row.row
+				+e.col--left.col-xl-4.text-center.text-xl-start
+					+e.ball
+						+e.b-txt--top Всего
+						+e.num 34
+						+e.b-txt--bot Организации
+					+e.from-txt.d-none.d-md-block.d-xl-none Из них:
+				+e.col--mid.col-xl-4.col-md-6
+					+e.from-txt.d-none.d-xl-block Из них:
+					+sOrganisationsCircle('31')
+						| дочернее общество ПАО&#160;«Газпром»
+					+e.c-items
+						+sOrganisationsItem('18', 'газотранспортных предприятий')
+						+sOrganisationsItem('7', 'газодобывающих компаний')
+						+sOrganisationsItem('6', 'дочерних обществ')
+				+e.col--right.col-xl-4.col-md-6
+					+sOrganisationsCircle('3')
+						| крупнейшие подрядные строительные организации
+	// end sOrganisations
+
+mixin sOrganisationsCircle(num)
+	+e.circle-wrap
+		+e.circle
+			+e.c-num=num
+		+e.c-txt
+			block
+
+mixin sOrganisationsItem(num, txt)
+	+e.item
+		+e.i-num=num
+		+e.i-txt=txt
