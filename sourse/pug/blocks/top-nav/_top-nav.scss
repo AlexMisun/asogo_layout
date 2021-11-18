@@ -8,7 +8,8 @@
 	//@include media-breakpoint-up(lg){
 	//	padding: rem(20) 0;
 	//}
-	padding: rem(24) 0;
+
+	padding: var(--tn-pt, #{rem(16) 0});
 	@include media-breakpoint-up(base){
 		padding: var(--tn-pt, 46px 0 49px);
 	}
@@ -29,9 +30,9 @@
 	&__logo{
 		display: block;
 
-		width: rem(104);
-		@include media-breakpoint-up(sm){
-			width: rem(128);
+		width: var(--logo-size, #{rem(104)});
+		@include media-breakpoint-up(lg){
+			width: var(--logo-size, #{rem(128)});
 		}
 
 		@include media-breakpoint-up(xxl){

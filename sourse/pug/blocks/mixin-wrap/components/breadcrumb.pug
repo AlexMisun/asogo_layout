@@ -1,8 +1,8 @@
 //- breadcrumb
 mixin breadcrumb(...items)
-	nav
-		ol.breadcrumb
+	nav.breadcrumb-wrap.swiper.breadcrumb-slider-js
+		ol.breadcrumb.swiper-wrapper
 			-for (var i = 0; i < items.length; i++)
-				li.breadcrumb-item(class=(i == items.length - 1 ? "active" : ''))
+				li.breadcrumb-item.swiper-slide
 					a(href=(i == 0 ? "/" : '#'))
 						span= items[i]

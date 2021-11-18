@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
+		<title>01</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -11,7 +11,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="01.png">
+	<body data-bg="01-320.png">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -71,10 +71,10 @@
 			<!-- end header-->
 			<div class="page-head">
 				<div class="container">
-					<nav>
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="/"><span>АСОГО</span></a></li>
-							<li class="breadcrumb-item active"><a href="#"><span>Об АСОГО</span></a></li>
+					<nav class="breadcrumb-wrap swiper breadcrumb-slider-js">
+						<ol class="breadcrumb swiper-wrapper">
+							<li class="breadcrumb-item swiper-slide"><a href="/"><span>АСОГО</span></a></li>
+							<li class="breadcrumb-item swiper-slide"><a href="#"><span>Об АСОГО</span></a></li>
 						</ol>
 					</nav>
 				</div>
@@ -147,17 +147,17 @@
 			<!-- start sControll-->
 			<section class="sControll section" id="sControll">
 				<div class="container">
-					<div class="section-title text-center text-lg-start">
+					<div class="section-title">
 						<h2>Органы управления и контроля АСОГО</h2>
 					</div>
 					<div class="sControll__row row">
-						<div class="col-lg-4">
+						<div class="sControll__col sControll__col--left col-md-4">
 							<div class="sControll__card filled up-lg-right">
 								<div class="sControll__title">Органы управления Ассоциации
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="sControll__col sControll__col--mid col-md-4">
 							<div class="sControll__card">
 								<div class="sControll__title">Высший орган управления
 								</div>
@@ -177,8 +177,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
-							<div class="sControll__card filled">
+						<div class="sControll__col sControll__col--right col-md-4">
+							<div class="sControll__card filled smaller-md">
 								<div class="sControll__title">Органы контроля Ассоциации
 								</div>
 							</div>
@@ -198,7 +198,7 @@
 				<div class="container">
 					<div class="sContract__box">
 						<!-- picture-->
-						<picture class="sContract__bg d-none d-lg-block"> 
+						<picture class="sContract__bg d-none d-md-block"> 
 							<source type="image/webp" srcset="img/@2x/webp/sContact-bg.webp" media="(min-width:576px)"/>
 							<source type="image/webp" srcset="img/@1x/webp/sContact-bg.webp"/>
 							<source type="image/png" srcset="img/@2x/sContact-bg.png" media="(min-width:576px)"/>
@@ -206,11 +206,13 @@
 						</picture>
 						<!-- /picture-->
 						<div class="section-title">
-							<h2>На VII Петербургском Международном Газовом Форуме подписано соглашение о взаимодействии между ПАО&#160;«Газпром» и АСОГО</h2>
+							<h2>На VII Петербургском Международном Газовом Форуме подписано соглашение о взаимодействии между ПАО «Газпром» и АСОГО</h2>
 							<p>№03/2017-АСОГО от 05.10.2017, в котором закреплены полномочия о выполнении АСОГО функций Центрального органа СДС ИНТЕРГАЗСЕРТ по направлению «Строительные материалы, работы (услуги)</p>
 						</div>
+						<a class="sContract__btn d-lg-none" href="#">Подробнее
+						</a>
 						<!-- picture-->
-						<picture class="sContract__img"> 
+						<picture class="sContract__img d-none d-md-flex"> 
 							<source type="image/webp" srcset="img/@2x/webp/sContact-cert.webp" media="(min-width:576px)"/>
 							<source type="image/webp" srcset="img/@1x/webp/sContact-cert.webp"/>
 							<source type="image/png" srcset="img/@2x/sContact-cert.png" media="(min-width:576px)"/>
@@ -293,7 +295,8 @@
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
+		<!--a(href="modal-call").link-modal-js modal-call-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">

@@ -369,6 +369,25 @@ function eventHandler() {
 		spaceBetween: 16,
 	});
 
+	//-
+	// let sMediaSlider = new Swiper('.sMedia-slider-js', {
+	// 	slidesPerView: 'auto',
+	// 	breakpoints: {
+	// 		0: {
+	// 			spaceBetween: 16,
+	// 		},
+	// 		1200: {
+	// 			spaceBetween: 24,
+	// 		},
+	// 	},
+	//
+	// });
+
+	//-
+	let breadcrumbSlider = new Swiper('.breadcrumb-slider-js', {
+		...freeMomentum,
+	});
+
 
 	// modal window
 

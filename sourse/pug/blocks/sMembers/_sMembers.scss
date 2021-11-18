@@ -1,6 +1,14 @@
 // start .sMembers
 .sMembers {
+	--sPT: #{rem(15)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(20)};
 	@include media-breakpoint-up(md) {
+		--sPT: #{rem(29)};
+		--sPB: #{rem(46)};
+		--sTPB: #{rem(36)};
+	}
+	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(82)};
 		--sPB: #{rem(114)};
 		--sTPB: #{rem(36)};

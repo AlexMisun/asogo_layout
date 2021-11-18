@@ -1,0 +1,15 @@
+mixin sNewsCat(data)
+	// start sNewsCat
+	+b.SECTION.sNewsCat.pt-0.section#sNewsCat&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Новости
+			+e.row
+				+e.col
+					+bigNewsItem()
+				-for(var i = 0; i < 16; i++)
+					+e.col
+						+sNewsItem('Обучение специалистов служб контроля качества подрядных организаций в 2021 году')
+			.text-center
+				+e.btn(href="#") Показать еще
+	// end sNewsCat

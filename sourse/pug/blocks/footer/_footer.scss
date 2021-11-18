@@ -23,7 +23,8 @@
 				margin-bottom: rem(60);
 			}
 			@include media-breakpoint-up(base){
-				margin-bottom: rem(117);
+				//margin-bottom: rem(117);
+				margin-bottom: rem(89px);
 			}
 		}
 	}

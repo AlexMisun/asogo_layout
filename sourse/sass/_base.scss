@@ -1,8 +1,7 @@
 .pixel-perfect {
 	top: 0;
-	//f-md
-	//top: -47px;
-	//top: -262px;
+	//top: 75px;
+
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
@@ -97,7 +96,15 @@ body {
 .main-page {
 	--header-bg: transparent;
 
-	--tn-pt: 40px 0 41px;
+	--tn-pt: rem(24) 0;
+	@include media-breakpoint-up(base){
+		--tn-pt: 40px 0 41px;
+	}
+	--logo-size: #{rem(104)};
+	@include media-breakpoint-up(sm){
+		--logo-size: #{rem(128)};
+	}
+
 
 	.header{
 		--tn-bg: transparent;
@@ -145,6 +152,11 @@ body {
 		}
 	}
 
+	h1{
+		@include media-breakpoint-down(lg){
+			font-size: rem(40);
+		}
+	}
 	h2{
 		@include media-breakpoint-down(lg){
 			font-size: rem(32)!important;
@@ -537,14 +549,137 @@ iframe {
 
 //
 .page-head{
-	padding: rem(24) 0;
+	position: relative;
+	z-index: 1;
+
+	padding: rem(17) 0 rem(23);
+	@include media-breakpoint-up(md){
+		padding: rem(20) 0;
+	}
 	@include media-breakpoint-up(xl){
 		padding: rem(30) 0;
 	}
 	@include media-breakpoint-up(base){
 		padding: rem(40) 0 rem(46) 2px;
 	}
+
+	&--blue{
+		color: $white;
+		--link-col: #{$white};
+		--link-hover-col: #{rgba($white, .8)};
+		--last-link-col: #{rgba($white, .5)};
+
+		padding: rem(17) 0 rem(20);
+		@include media-breakpoint-up(md){
+			padding: rem(16) 0 rem(20);
+		}
+		@include media-breakpoint-up(xl){
+			padding: rem(30) 0;
+		}
+		@include media-breakpoint-up(base){
+			padding: rem(40) 0 rem(84) 2px;
+		}
+	}
+
+	//-
+	&__img{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(0deg, rgba(39, 83, 240, 0.51), rgba(39, 83, 240, 0.51));
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__back-link{
+		display: inline-block;
+
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(34);
+		}
+		.icon{
+			//color: $white;
+			stroke: $white;
+			font-size: 18px;
+		}
+	}
+
+	h1{
+		font-size: rem(32);
+		margin-bottom: rem(12);
+		@include media-breakpoint-up(md){
+			font-size: rem(32);
+			margin-bottom: rem(16);
+		}
+		@include media-breakpoint-up(lg){
+			font-size: rem(54);
+			margin-bottom: rem(23);
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		line-height: 1.2;
+		color: $white;
+	}
+	p{
+		max-width: rem(292);
+		@include media-breakpoint-up(sm){
+			max-width: rem(600);
+		}
+		@include media-breakpoint-up(lg){
+			max-width: rem(741);
+		}
+
+		line-height: 1.7;
+		color: $white;
+		font-weight: 500;
+
+		font-size: rem(16);
+		@include media-breakpoint-up(lg){
+			font-size: rem(20);
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	//
+	&__{}
+	&__{}
 }
+
+.breadcrumb-wrap{
+	overflow: visible;
+
+	margin-bottom: rem(20);
+	@include media-breakpoint-up(md){
+		margin-bottom: rem(22);
+	}
+	@include media-breakpoint-up(lg){
+		margin-bottom: rem(38);
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
 .breadcrumb{
 	list-style: none;
 	padding: 0;
@@ -553,6 +688,7 @@ iframe {
 	align-items: center;
 
 	.breadcrumb-item{
+		width: auto;
 		display: flex;
 		align-items: center;
 		&:after{
@@ -575,6 +711,11 @@ iframe {
 
 		a{
 			font-size: rem(12);
+
+			color: var(--link-col, #{$primary});
+			&:hover{
+				color: var(--link-hover-col);
+			}
 		}
 
 		&:last-child{
@@ -584,9 +725,47 @@ iframe {
 			}
 
 			a{
-				color: $gray-710;
+				color: var(--last-link-col, #{$gray-710});
 			}
 		}
 	}
 
+}
+
+//
+.default-ul{
+	list-style: none;
+	padding: 0;
+
+	li{
+		position: relative;
+		@include media-breakpoint-down(sm){
+			margin-right: 2px;
+		}
+
+		margin-bottom: rem(11);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(13);
+		}
+		padding-left: rem(33);
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&:before{
+			content: '';
+			position: absolute;
+
+			top: rem(12);
+			@include media-breakpoint-up(lg){
+				top: rem(17);
+			}
+			left: 0;
+			width: rem(8);
+			height: rem(8);
+			border-radius: 50%;
+			background-color: $primary;
+		}
+	}
 }

@@ -1,0 +1,98 @@
+// start .sEducation
+.sEducation {
+	--sPB: #{rem(32)};
+	--sTPB: #{rem(22)};
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(32)};
+		--sTPB: #{rem(38)};
+	}
+	@include media-breakpoint-up(xl) {
+		--sPB: #{rem(86)};
+		--sTPB: #{rem(55)};
+	}
+
+	.container{
+		@include media-breakpoint-up(base){
+			padding-right: rem(25);
+		}
+	}
+
+	.section-title{
+		h1{
+
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
+		@include media-breakpoint-up(lg){
+			--bs-gutter-x: #{rem(24)};
+			--bs-gutter-y: #{rem(24)};
+		}
+	}
+	&__item{
+		position: relative;
+		z-index: 1;
+		min-height: 100%;
+
+		padding: rem(20) rem(22) rem(28);
+		@include media-breakpoint-up(md){
+			padding: rem(23) rem(24) rem(28);
+		}
+		@include media-breakpoint-up(xl){
+			padding: rem(64) rem(38) rem(70) rem(56);
+		}
+	}
+	&__img{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			background: linear-gradient(0deg, rgba(39, 83, 240, 0.51), rgba(39, 83, 240, 0.51));
+		}
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__title{
+		font-size: rem(24);
+		@include media-breakpoint-up(md){
+			font-size: rem(32);
+		}
+		@include media-breakpoint-up(lg){
+			max-width: 90%;
+			font-size: rem(54);
+		}
+
+		margin-bottom: rem(24);
+
+		line-height: 1.2;
+		color: $white;
+	}
+	//
+	&__descr{
+		font-size: rem(14);
+		line-height: 1.6;
+		@include media-breakpoint-up(lg){
+			max-width: rem(608);
+			font-size: rem(20);
+			line-height: 1.7;
+		}
+		color: $white;
+	}
+	&__{}
+} // end.sEducation

@@ -1,0 +1,20 @@
+mixin sMedia(data)
+	// start sMedia
+	+b.SECTION.sMedia.d-none.d-md-block.section#sMedia&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Сми о нас
+			+e.row.row
+				+sMediaItem('Известия.ру')
+				+sMediaItem('ЖурналГАЗ')
+				+sMediaItem('Российская газета')(class="d-none d-lg-block")
+			.text-center
+				+e.btn(href="#") Показать еще
+	// end sMedia
+
+mixin sMediaItem(src)
+	.col-md-6.col-lg-4&attributes(attributes)
+		+e.item
+			+e.date 09 апреля 2020
+			+e.title(href="#") Заголовок статьи из источника в несколько строк для наглядности отображения
+			+e.src(href="#")=src

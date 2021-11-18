@@ -3,9 +3,10 @@ mixin sContract(data)
 	+b.SECTION.sContract.section#sContract&attributes(attributes)
 		.container
 			+e.box
-				+pic('sContact-bg.png')(class="sContract__bg d-none d-lg-block")
+				+pic('sContact-bg.png')(class="sContract__bg d-none d-md-block")
 				+b.section-title
-					h2 На VII Петербургском Международном Газовом Форуме подписано соглашение о взаимодействии между ПАО&#160;«Газпром» и АСОГО
+					h2 На VII Петербургском Международном Газовом Форуме подписано соглашение о взаимодействии между ПАО «Газпром» и АСОГО
 					p №03/2017-АСОГО от 05.10.2017, в котором закреплены полномочия о выполнении АСОГО функций Центрального органа СДС ИНТЕРГАЗСЕРТ по направлению «Строительные материалы, работы (услуги)
-				+pic('sContact-cert.png')(class="sContract__img")
+				+e.btn.d-lg-none(href="#") Подробнее
+				+pic('sContact-cert.png')(class="sContract__img d-none d-md-flex")
 	// end sContract

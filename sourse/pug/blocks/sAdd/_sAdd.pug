@@ -1,0 +1,52 @@
+mixin sAdd(data)
+	// start sAdd
+	+b.sAdd.section#sAdd&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-8
+					+e.content
+						h6 Обучение работников проводится по следующим направлениям:
+						ul
+							li Повышение квалификации по проектированию, строительству и изысканиям;
+							li Профессиональная переподготовка по различным направлениям, в соответствии с профессиональными стандартами и требованиями законодательства
+							li Промышленная безопасность;
+							li Экологическая безопасность;
+							li Электробезопасность;
+							li Обучение рабочим специальностям;
+							li Охрана труда;
+							li Безопасные методы и приемы выполнения работ на высоте;
+							li Оказание первой помощи;
+							li Пожарно-технический минимум;
+							li Гражданская оборона и защита населения от чрезвычайных ситуаций.
+						p Обучение может проходить в учебном центре, на территории обучаемых предприятий, с применением дистанционных образовательных технологий.
+				.col-lg-4.d-none.d-lg-block
+					+e.gray-box
+						+e.g-top
+							| По вопросам организации обучения и стоимости программы обращайтесь по адресу
+							|
+							a(href="mailto:asogo@asogo.ru") asogo@asogo.ru
+						+e.g-title Информация об учебном центре:
+						+e.g-gray ООО «МНТЦ СТРОЙНЕФТЕГАЗ»
+						+e.c-items
+							+sAddContactItem('tell', '+7 (499) 399-00-05')(href="tel:+74993990005")
+							+sAddContactItem('mail', 'info@sngrf.ru')(href="mailto:info@sngrf.ru")
+							+sAddContactItem('location', 'Москва, ул. Шоссе энтузиастов, д. 56, стр. 32.')
+						+e.download
+							+sAddDownloadItem('Основные программы обучения')
+							+sAddDownloadItem('Стоимость обучения')
+						//location
+	// end sAdd
+
+mixin sAddDownloadItem(txt)
+	+e.d-item(href="#")
+		+e.d-row.row.align-items-center
+			+e.d-col--icon.col-auto
+				img(loading="lazy" src=`img/svg/pdf.svg` alt="")
+			+e.d-col--txt.col=txt
+
+mixin sAddContactItem(iconName, txt)
+	+e.c-item&attributes(attributes)
+		+e.c-row.row.align-items-center
+			+e.c-col--icon.col-auto
+				+icon(iconName)
+			+e.c-col--txt.col=txt

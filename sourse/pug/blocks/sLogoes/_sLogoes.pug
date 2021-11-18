@@ -1,0 +1,17 @@
+mixin sLogoes(data)
+	// start sLogoes
+	+b.SECTION.sLogoes.section#sLogoes&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Информационные партнеры
+			+e.row.row
+				-for(var i = 1; i <= 8; i++)
+					+sLogoesItem(i)
+	// end sLogoes
+
+mixin sLogoesItem(imgNum)
+	.col-6.col-md-3
+		+e.item
+			+e.img
+				img(loading="lazy" src=`img/@2x/sLogoes-${imgNum}.png` alt="")
+			+e.txt.text-center Подпись к логотипу с&#160;кратким опсанием компании

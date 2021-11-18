@@ -12,6 +12,7 @@
 		--sTPB: #{rem(30)};
 	}
 	@include media-breakpoint-up(xl) {
+		margin-bottom: rem(26px);
 		--sPT: #{rem(74)};
 		--sPB: #{rem(105)};
 		--sTPB: #{rem(44)};

@@ -1,6 +1,14 @@
 // start .sTargets
 .sTargets {
+	--sPT: #{rem(20)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(30)};
 	@include media-breakpoint-up(md) {
+		--sPT: #{rem(20)};
+		--sPB: #{rem(10)};
+		--sTPB: #{rem(25)};
+	}
+	@include media-breakpoint-up(xl) {
 		--sPT: #{rem(44)};
 		--sPB: #{rem(50)};
 		--sTPB: #{rem(66)};

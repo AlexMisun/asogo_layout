@@ -2,16 +2,16 @@ mixin sControll(data)
 	// start sControll
 	+b.SECTION.sControll.section#sControll&attributes(attributes)
 		.container
-			+b.section-title.text-center.text-lg-start
+			+b.section-title
 				h2 Органы управления и контроля АСОГО
 			+e.row.row
-				.col-lg-4
+				+e.col--left.col-md-4
 					+sControllCard({
 						cardClasses: 'filled up-lg-right',
 						title: 'Органы управления Ассоциации',
 						descr: '',
 					})
-				.col-lg-4
+				+e.col--mid.col-md-4
 					+sControllCard({
 						cardClasses: '',
 						title: 'Высший орган управления',
@@ -27,9 +27,9 @@ mixin sControll(data)
 						title: 'Единоличный исполнительный орган',
 						descr: 'Исполнительный директор Ассоциации',
 					})
-				.col-lg-4
+				+e.col--right.col-md-4
 					+sControllCard({
-						cardClasses: 'filled',
+						cardClasses: 'filled smaller-md',
 						title: 'Органы контроля Ассоциации',
 						descr: '',
 					})

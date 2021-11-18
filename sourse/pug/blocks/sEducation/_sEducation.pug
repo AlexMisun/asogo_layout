@@ -1,0 +1,17 @@
+mixin sEducation(data)
+	// start sEducation
+	+b.SECTION.sEducation.section.pt-0#sEducation&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Обучение
+			+e.row.row
+				+sEducationItem(1, 'Дополнительное образование	', 'Дополнительное профессиональное образование, профессиональная переподготовка, повышение квалификации')
+				+sEducationItem(2, 'Строительный контроль', 'Строительный контроль для повышения участников  управления качеством строительства, реконструкции и капитального ремонта')
+	// end sEducation
+
+mixin sEducationItem(imgNum, title, descr)
+	.col-md-6
+		+e.item
+			+pic(`sEducation-${imgNum}.jpg`)(class="sEducation__img")
+			+e.title=title
+			+e.descr=descr

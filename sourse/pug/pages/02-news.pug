@@ -1,0 +1,29 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sTargets/_sTargets.pug
+include ../blocks/sControll/_sControll.pug
+include ../blocks/sContract/_sContract.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sNewsCat/_sNewsCat.pug
+
+block variables
+	- let  mainPage= ''
+	- let  bg='02-320.png'
+
+block title
+	- let  title= '02'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+b.page-head
+		.container
+			+breadcrumb('АСОГО', 'Новости')
+	+sNewsCat()
+	+footer()(class="has-bt")

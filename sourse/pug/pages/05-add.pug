@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sTargets/_sTargets.pug
+include ../blocks/sControll/_sControll.pug
+include ../blocks/sContract/_sContract.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sNewsCat/_sNewsCat.pug
+include ../blocks/sPress/_sPress.pug
+include ../blocks/sMedia/_sMedia.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sEducation/_sEducation.pug
+include ../blocks/sAdd/_sAdd.pug
+
+block variables
+	- let  mainPage= ''
+	- let  bg='05-320.png'
+
+block title
+	- let  title= '05'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+b.page-head--blue
+		+pic('sAdd-bg.jpg')(class="page-head__img")
+		.container
+			+breadcrumb('АСОГО', 'Обучение', 'Дополнительное образование')
+			+e.back-link(href="#")
+				+icon('arrow-l')
+			h1 Дополнительное образование
+			p Дополнительное профессиональное образование, профессиональная переподготовка, повышение квалификации
+	+sAdd()
+	+footer()(class="has-bt")

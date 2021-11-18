@@ -7,9 +7,29 @@
 	fill: currentColor;
 }
 
+.icon-arrow-l {
+	font-size:math.div(18,10)*1rem;
+	width: math.div(47,18)*1em;
+}
 .icon-basket {
 	font-size:math.div(24,10)*1rem;
 	width: math.div(22,24)*1em;
+}
+.icon-call {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
+.icon-location {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
+.icon-mail {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
+}
+.icon-tell {
+	font-size:math.div(16,10)*1rem;
+	width: math.div(16,16)*1em;
 }
 .icon-user {
 	font-size:math.div(16,10)*1rem;
