@@ -3,7 +3,10 @@ mixin sPartners(data)
 	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Партнеры
+				if data.h1
+					h1 Партнеры
+				else
+					h2 Партнеры
 			+e.row.row
 				.col-lg-3
 					+e.descr АО «Мессояханефтегаз» – совместное предприятие ПАО «Газпром нефть» и ПАО «НК «Роснефть», которому принадлежат лицензии на разведку и разработку группы

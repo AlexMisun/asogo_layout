@@ -5,7 +5,10 @@ mixin sMembers(data)
 			+pic('sMembers-bg.png')(class="sMembers__bg")
 		.container
 			+b.section-title
-				h2 Члены АСОГО
+				if data.title
+					h2=data.title
+				else
+					h2 Члены АСОГО
 			+e.row.row
 				.col-lg-9
 					+e.title Дочерние Общества ПАО «Газпром»

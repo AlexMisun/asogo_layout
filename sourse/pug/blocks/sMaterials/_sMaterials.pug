@@ -1,0 +1,23 @@
+mixin sMaterials(data)
+	// start sMaterials
+	+b.SECTION.sMaterials.section#sMaterials&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Информационные материалы
+			+e.row.row
+				+sMaterialsItem('Общая информация об Ассоциации строительных организаций газовой отрасли ')
+				+sMaterialsItem('Общая информация об Ассоциации строительных организаций ')
+				+sMaterialsItem('Единства системы и правил подтверждения компетентности')
+				+sMaterialsItem('Общая информация об Ассоциации строительных организаций')
+				+sMaterialsItem('Общая информация об Ассоциации строительных организаций газовой отрасли ')
+	// end sMaterials
+
+mixin sMaterialsItem(name)
+	.col-lg-4.col-md-6
+		+e.item(href="#")
+			+e.item-row.row
+				+e.col--img.col-auto
+					img(loading="lazy" src="img/svg/pdf.svg" alt="")
+				+e.col--txt.col
+					+e.name=name
+					+e.gray PDF 1.3 mb

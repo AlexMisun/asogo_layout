@@ -47,6 +47,22 @@
 		}
 	}
 
+	&--alt2{
+		--sPT: #{rem(29)};
+		--sPB: #{rem(25)};
+		--sTPB: #{rem(19)};
+		@include media-breakpoint-up(md) {
+			--sPT: #{rem(31px)};
+			--sPB: #{rem(35)};
+			--sTPB: #{rem(34)};
+		}
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(32)};
+			--sPB: #{rem(32)};
+			--sTPB: #{rem(40)};
+		}
+	}
+
 	//-
 
 	position: relative;

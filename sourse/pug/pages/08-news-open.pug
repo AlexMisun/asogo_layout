@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sTargets/_sTargets.pug
+include ../blocks/sControll/_sControll.pug
+include ../blocks/sContract/_sContract.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sNewsCat/_sNewsCat.pug
+include ../blocks/sPress/_sPress.pug
+include ../blocks/sMedia/_sMedia.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sEducation/_sEducation.pug
+include ../blocks/sAdd/_sAdd.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sArticle/_sArticle.pug
+
+block variables
+	- let  mainPage= ''
+	- let  bg='08-320.png'
+
+block title
+	- let  title= '08'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+b.page-head--alt
+		.container
+			+breadcrumb('АСОГО', 'Новости', '«Газпром» в полтора раза увеличивает парк мобильных компрессорных станций для сохранения газа при ремонтах газопроводов')
+			+e.back-link(href="#")
+				+icon('arrow-l')
+			h1 «Газпром» в полтора раза увеличивает парк мобильных компрессорных станций для сохранения газа при ремонтах&#160;газопроводов
+			+e.date 29 октября 2021, 19:25
+	+sArticle()
+	+footer()(class="has-bt")

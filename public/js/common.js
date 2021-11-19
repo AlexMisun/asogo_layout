@@ -388,6 +388,16 @@ function eventHandler() {
 		...freeMomentum,
 	});
 
+	//-
+	$('.make-yandex-lazy-js').each(function (){
+		let self = this;
+
+		window.setTimeout(function (){
+			$(self.parentElement).html($(self).data("src"));
+			self.remove();
+		}, 3500)
+	});
+
 
 	// modal window
 

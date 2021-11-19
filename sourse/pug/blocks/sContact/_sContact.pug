@@ -1,6 +1,47 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
-
-
+	+b.SECTION.sContact.section.pt-0#sContact&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Контакты
+			+e.row.row.align-items-center
+				.col-xl-6
+					+e.items
+						+sContactItem({
+							iconName: 'location',
+							title: 'Физический адрес',
+							txt: '119415, г. Москва, проспект Вернадского, д. 41, стр. 1',
+						})
+						+sContactItem({
+							iconName: 'location',
+							title: 'Юридический адрес',
+							txt: '196210,  г. Санкт-Петербург, улица Стартовая, д. 6, литера Б',
+						})
+						+sContactItem({
+							iconName: 'mail',
+							title: 'Электронная почта',
+							href: 'mailto:office@asogo.ru',
+							txt: 'office@asogo.ru',
+						})
+						+sContactItem({
+							iconName: 'tell',
+							title: 'Телефон',
+							href: 'tell:84953691224',
+							txt: '8(495) 369-12-24',
+						})
+				.col-xl-6
+					+e.map
+						.make-yandex-lazy-js(data-src="<script async src=\"https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afc5326583a0d0f770f3e89e8147b5939536e33547093787f00f2944799db44a3&amp;width=1080&amp;height=518&amp;lang=ru_RU&amp;scroll=false\"></script>")
 	// end sContact
+
+mixin sContactItem(data)
+	+e.item
+		+e.i-row.row
+			+e.col--icon.col-auto
+				+icon(data.iconName)
+			.col
+				+e.title=data.title
+				if data.href
+					+e.txt(href=data.href)=data.txt
+				else
+					+e.txt=data.txt

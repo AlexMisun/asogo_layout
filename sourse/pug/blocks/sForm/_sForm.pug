@@ -2,8 +2,26 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			+e.box
+				+b.section-title
+					h2 Напишите нам
+				+form-wrap
+					+e.row--top.row
+						+e.col--left.col-md-6.col-xxl-auto
+							+input('Введите', 'text', 'Имя')
+							+input('Введите', 'tel', 'Телефон')
+							+input('Введите', 'email', 'E-mail')
+						+e.col--right.col-md-6.col-xxl-auto
+							+input('Введите', 'textarea', 'Ваше сообщение')
+					+e.row--bot.row.align-items-center
+						+e.col--left.col-md-6.col-xxl-auto
+							+e.btn(href="#") Отправить
+						+e.col--right.col-md-6.col-xxl-auto
+							+b.LABEL.policy-chb
+								input(type="checkbox" class="invisible" checked)
+								span.square
+								span.txt
+									| Я согласен с политикой
+									|
+									a(href="#") обработки персональных данных
 	// end sForm

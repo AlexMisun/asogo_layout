@@ -1,0 +1,37 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sTargets/_sTargets.pug
+include ../blocks/sControll/_sControll.pug
+include ../blocks/sContract/_sContract.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sNewsCat/_sNewsCat.pug
+include ../blocks/sPress/_sPress.pug
+include ../blocks/sMedia/_sMedia.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sEducation/_sEducation.pug
+include ../blocks/sAdd/_sAdd.pug
+include ../blocks/sPartners/_sPartners.pug
+
+block variables
+	- let  mainPage= ''
+	- let  bg='07.png'
+
+block title
+	- let  title= '07'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+b.page-head
+		.container
+			+breadcrumb('АСОГО', 'Партнеры')
+	+sPartners({
+		h1: true,
+	})(class="alt")
+	+footer()(class="has-bt")

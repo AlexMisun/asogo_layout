@@ -2,6 +2,17 @@
 .sPartners {
 	//-
 	background: rgba($blue2, .1);
+	&.alt{
+		background: transparent;
+		--item-bg: #{$gray-200};
+
+		@include media-breakpoint-up(xl) {
+			--sPT: #{rem(74)};
+			--sPB: #{rem(105)};
+			--sTPB: #{rem(44)};
+			margin-bottom: 0;
+		}
+	}
 
 	--sPT: #{rem(26)};
 	--sPB: #{rem(22)};
@@ -61,7 +72,7 @@
 	}
 	&__items{}
 	&__item{
-		background-color: $white;
+		background-color: var(--item-bg, #{$white});
 
 		margin-bottom: rem(16);
 		@include media-breakpoint-up(lg){
