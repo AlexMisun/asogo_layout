@@ -283,7 +283,10 @@ function eventHandler() {
 	}
 	window.addEventListener('resize', calcHeaderHeight, { passive: true });
 	window.addEventListener('scroll', calcHeaderHeight, { passive: true });
+
 	calcHeaderHeight();
+	window.setTimeout(calcHeaderHeight, 10);
+	window.setTimeout(calcHeaderHeight, 100);
 
 
 	let defaultSl = {
@@ -397,6 +400,19 @@ function eventHandler() {
 			self.remove();
 		}, 3500)
 	});
+
+
+	//-
+	let sPersonalCabSlider = new Swiper('.sPersonalCab-slider-js', {
+		slidesPerView: 'auto',
+		...freeMomentum,
+	});
+	let submenuSlider = new Swiper('.submenu-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 46,
+		...freeMomentum,
+	});
+	//
 
 
 	// modal window

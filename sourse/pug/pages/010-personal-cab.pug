@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sTargets/_sTargets.pug
+include ../blocks/sControll/_sControll.pug
+include ../blocks/sContract/_sContract.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sNewsCat/_sNewsCat.pug
+include ../blocks/sPress/_sPress.pug
+include ../blocks/sMedia/_sMedia.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sEducation/_sEducation.pug
+include ../blocks/sAdd/_sAdd.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sArticle/_sArticle.pug
+include ../blocks/sMembership/_sMembership.pug
+include ../blocks/sMaterials/_sMaterials.pug
+include ../blocks/sPersonalCab/_sPersonalCab.pug
+
+block variables
+	- let  mainPage= ''
+	- let  bg='010-320.png'
+
+block title
+	- let  title= '010'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav({
+			isLogged: true,
+		})
+	+b.page-head
+		.container
+			+breadcrumb('АСОГО', 'Личный кабинет')
+	+sPersonalCab()
+	+footer()(class="has-bt")

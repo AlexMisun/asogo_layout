@@ -1,0 +1,52 @@
+// start .sAdmition
+.sAdmition {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(50)};
+		--sTPB: #{rem(40)};
+	}
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(50)};
+		--sTPB: #{rem(40)};
+	}
+
+	.section-title{
+		h1{
+
+		}
+	}
+	&__row{
+
+	}
+	&__content{
+		h6{}
+		p{}
+		ul{
+
+		}
+	}
+	&__gray-box{}
+	&__g-title{}
+	&__g-row{}
+	&__g-item{}
+	&__g-sub-row{}
+	&__g-col{
+		&--icon{
+			.icon{}
+		}
+		&--txt{}
+	}
+	&__gray{}
+	&__txt{}
+	//
+	&__{}
+	&__{}
+} // end.sAdmition
+
+.adm-filter{
+	&__btn{}
+}

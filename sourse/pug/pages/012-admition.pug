@@ -1,0 +1,43 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sTargets/_sTargets.pug
+include ../blocks/sControll/_sControll.pug
+include ../blocks/sContract/_sContract.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sNewsCat/_sNewsCat.pug
+include ../blocks/sPress/_sPress.pug
+include ../blocks/sMedia/_sMedia.pug
+include ../blocks/sLogoes/_sLogoes.pug
+include ../blocks/sEducation/_sEducation.pug
+include ../blocks/sAdd/_sAdd.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sArticle/_sArticle.pug
+include ../blocks/sMembership/_sMembership.pug
+include ../blocks/sMaterials/_sMaterials.pug
+include ../blocks/sPersonalCab/_sPersonalCab.pug
+include ../blocks/sCertification/_sCertification.pug
+include ../blocks/sAdmition/_sAdmition.pug
+
+block variables
+	- let  mainPage= ''
+	- let  bg='011-320.png'
+
+block title
+	- let  title= '011'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav({})
+	+b.page-head
+		.container
+			+breadcrumb('АСОГО', 'Сертификация', 'Признание компетентности')
+			+e.back-link(href="#")
+				+icon('arrow-l')
+	+sAdmition()
+	+footer()(class="has-bt")

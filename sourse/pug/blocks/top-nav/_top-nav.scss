@@ -84,6 +84,15 @@
 			}
 		}
 	}
+
+	//-
+	&__ig{
+		@include media-breakpoint-down(sm){
+			& > *{
+				border-radius: rem(4) !important;
+			}
+		}
+	}
 	&__btn{
 		@extend .btn;
 		@extend .btn-outline-white;
@@ -102,6 +111,14 @@
 
 		font-size: rem(14);
 		line-height: calc(17/14);
+
+		&--personal-cab{
+			.icon{
+				@include media-breakpoint-down(sm){
+					margin-right: 0;
+				}
+			}
+		}
 	}
 	&__{}
 	&__{}

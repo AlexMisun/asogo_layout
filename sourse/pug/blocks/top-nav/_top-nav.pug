@@ -10,7 +10,7 @@ mixin mob-mnu()
 			+mnu()
 	//  мобильное меню
 
-mixin top-nav() 
+mixin top-nav(data)
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		+e.container.container
@@ -22,8 +22,18 @@ mixin top-nav()
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
 				.col.d-none.d-lg-block
 					+mnu()
-				.col-auto
-					+e.btn(href="#")
-						+icon('user')
-						span Войти
+				if data && data.isLogged
+					.col-auto
+						//-+e.ig
+						.input-group
+							+e.btn--personal-cab(href="#")
+								+icon('user')
+								span.d-none.d-sm-inline Виктор А.
+							+e.btn(href="#")
+								span Выйти
+				else
+					.col-auto
+						+e.btn(href="#")
+							+icon('user')
+							span Войти
 	// end top-nav

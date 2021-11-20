@@ -1,0 +1,326 @@
+// start .sCertification
+.sCertification {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(25)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(20)};
+		--sTPB: #{rem(25)};
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(45)};
+		--sPB: #{rem(77)};
+		--sTPB: #{rem(71)};
+	}
+
+	&__container{
+		@include media-breakpoint-up(base){
+			padding-right: rem(25);
+		}
+	}
+
+	.section-title{
+		h1{
+
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(8)};
+		--bs-gutter-y: #{rem(8)};
+		margin-bottom: rem(26);
+		@include media-breakpoint-up(md){
+			--bs-gutter-x: #{rem(19.5)};
+			--bs-gutter-y: #{rem(18)};
+			margin-bottom: rem(25);
+		}
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(26)};
+			--bs-gutter-y: #{rem(26)};
+			margin-bottom: rem(76);
+		}
+	}
+	&__col{
+		display: flex;
+		flex-direction: column;
+
+		@include media-breakpoint-between(md, xxl){
+			&:nth-child(1){
+				width: calc(100%/3) !important;
+			}
+			&:nth-child(2){
+				width: calc(100%/3) !important;
+			}
+			&:nth-child(3){
+				width: calc(100%/3) !important;
+			}
+		}
+		@include media-breakpoint-up(xxl){
+			width: 20% !important;
+		}
+	}
+	&__item{
+		@include mt();
+
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-up(md){
+			justify-content: center;
+		}
+		flex-grow: 1;
+
+		min-height: rem(56);
+		padding: rem(3) rem(15);
+		@include media-breakpoint-up(md){
+			min-height: rem(90);
+			padding: rem(20) rem(24);
+		}
+		@include media-breakpoint-up(lg){
+			padding: rem(22) rem(16);
+			min-height: rem(120);
+		}
+		@include media-breakpoint-up(xxl){
+			padding: rem(10) rem(32);
+		}
+
+		background: transparent;
+		&.active{
+			background: rgba(159, 177, 232, 0.5);
+		}
+
+		border: 1px solid $blue;
+	}
+	&__i-row{
+		--bs-gutter-x: #{rem(16)};
+		@include media-breakpoint-up(md){
+			--bs-gutter-x: #{rem(24)};
+		}
+		@include media-breakpoint-up(base){
+			--bs-gutter-x: #{rem(32)};
+		}
+	}
+	&__i-col{
+		&--icon{
+			width: calc(var(--bs-gutter-x) + #{rem(24)});
+			@include media-breakpoint-up(md){
+				width: calc(var(--bs-gutter-x) + #{rem(36)});
+			}
+			@include media-breakpoint-up(lg){
+				width: calc(var(--bs-gutter-x) + #{rem(48)});
+			}
+
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		&--txt{
+			@include media-breakpoint-up(md){
+				max-width: calc(var(--bs-gutter-x) + #{rem(175)});
+			}
+			@include media-breakpoint-up(lg){
+				max-width: calc(100% - #{rem(36)});
+			}
+			@include media-breakpoint-up(lg){
+				max-width: calc(100% - #{rem(48)});
+			}
+
+			font-weight: 500;
+			line-height: 1.5;
+
+			font-size: rem(14);
+			@include media-breakpoint-up(md){
+				font-size: rem(16);
+			}
+			@include media-breakpoint-up(xl){
+				font-size: rem(20);
+			}
+
+			color: $blue;
+		}
+	}
+	&__title-row{
+
+		--bs-gutter-y: #{rem(20)};
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md){
+			--bs-gutter-y: #{rem(24)};
+			margin-bottom: rem(40);
+		}
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(31);
+		}
+	}
+	&__txt-box{
+		max-width: 99%;
+		@include media-breakpoint-up(md){
+			max-width: rem(971);
+		}
+
+		line-height: 1.7;
+
+		p:first-child{
+			font-size: rem(20);
+			margin-bottom: rem(26);
+			@include media-breakpoint-up(lg){
+				font-size: rem(24);
+				margin-bottom: rem(32);
+			}
+		}
+		p:not(:first-child){
+			font-size: rem(16);
+			@include media-breakpoint-up(lg){
+				font-size: rem(20);
+			}
+
+			line-height: 1.7;
+			color: $gray-710;
+		}
+
+		& > *:last-child{
+			margin-bottom: 0!important;
+		}
+	}
+	&__gray-box{
+		padding: rem(24) rem(26) rem(26);
+		@include media-breakpoint-up(md){
+			padding: rem(24) rem(28) rem(38);
+		}
+		@include media-breakpoint-up(lg){
+			padding: rem(32) rem(24) rem(40);
+		}
+		@include media-breakpoint-up(base){
+			padding: rem(32) rem(48) rem(51);
+		}
+		background: $gray-200;
+	}
+	&__g-title{
+		font-size: rem(20);
+
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(28);
+		}
+		@include media-breakpoint-up(lg){
+			font-size: rem(24);
+			margin-bottom: rem(41);
+		}
+		line-height: 1.7;
+	}
+
+	//-
+	&__g-items{
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(24)};
+
+		@include media-breakpoint-between(md,lg){
+			padding-left: rem(10);
+			padding-right: rem(24);
+		}
+		@include media-breakpoint-up(md){
+			--bs-gutter-x: #{rem(32)};
+			--bs-gutter-y: #{rem(32)};
+		}
+		@include media-breakpoint-up(lg){
+			--bs-gutter-x: #{rem(22)};
+			--bs-gutter-y: #{rem(22)};
+		}
+	}
+	&__g-item{
+
+	}
+	&__g-row{
+		--bs-gutter-x: #{rem(25)};
+		@include media-breakpoint-up(md){
+			--bs-gutter-x: #{rem(26)};
+		}
+		@include media-breakpoint-up(lg){
+			--bs-gutter-x: #{rem(21)};
+		}
+	}
+	&__g-col{
+		&--icon{
+			.icon{
+				font-size: rem(14);
+				color: $primary;
+			}
+		}
+		&--txt{
+
+		}
+	}
+	&__gray{
+		margin-bottom: rem(7);
+		font-size: rem(14);
+		line-height: calc(17/14);
+
+		color: $gray-710;
+	}
+	&__g-txt{
+		font-size: rem(20);
+		line-height: 1.7;
+	}
+	//
+	&__content{
+		line-height: 1.7;
+
+		font-size: rem(16);
+		@include media-breakpoint-up(lg){
+			font-size: rem(20);
+		}
+
+		max-width: rem(971);
+		h2{
+			font-size: rem(32);
+			margin-bottom: rem(24);
+
+			@include media-breakpoint-between(md,lg){
+				max-width: 99%;
+			}
+			@include media-breakpoint-up(lg){
+				font-size: rem(40);
+				margin-bottom: rem(32);
+			}
+			@include media-breakpoint-up(base){
+				font-size: rem(54);
+			}
+			color: $black;
+		}
+		ul{
+			@extend .default-ul;
+			@include media-breakpoint-up(base){
+				max-width: 97%;
+			}
+			@include media-breakpoint-between(md,lg){
+				max-width: 98%;
+			}
+
+			li{
+				@include media-breakpoint-down(md){
+					margin-bottom: rem(9.75) !important;
+				}
+				@include media-breakpoint-between(md,lg){
+					margin-bottom: rem(10.5) !important;
+				}
+
+				@include media-breakpoint-up(base){
+					margin-bottom: rem(12)!important;
+				}
+			}
+
+			margin: 0 0 rem(40);
+			@include media-breakpoint-up(lg){
+				margin: 0 0 rem(48);
+			}
+		}
+		p{
+			&:last-child{
+				@include media-breakpoint-up(base){
+					margin-top: 68px;
+					max-width: 88%;
+				}
+			}
+		}
+	}
+	&__{}
+} // end.sCertification

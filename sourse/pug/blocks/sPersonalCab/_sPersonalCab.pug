@@ -1,0 +1,51 @@
+mixin sPersonalCab(data)
+	// start sPersonalCab
+	+b.SECTION.sPersonalCab.section.pt-xl-0#sPersonalCab&attributes(attributes)
+		.container
+			+e.head-row.row.align-items-center
+				.col-lg
+					+b.section-title
+						h2 Голоборотьков Виктор Александрович
+				.col-lg-auto.order-first.order-lg-0
+					+e.edit-btn(href="#")
+						+icon('edit')
+						| Редактировать профиль
+			+e.top-row.row
+				+sPersonalCabTRCol('ПАО «Газпром»')
+				+sPersonalCabTRCol('Руководитель отдела')
+		+e.blue-line
+			.container
+				+e.slider-wrap
+					.swiper.sPersonalCab-slider-js
+						.swiper-wrapper
+							+sPersonalCabSlide('Техническое регулирование и стандартизация', 'active')
+							+sPersonalCabSlide('Организационная деятельность')
+							+sPersonalCabSlide('Обучение и строительная деятельность')
+		+e.content-wrap
+			.container
+				+e.c-row.row
+					.col-lg-4
+						+e.submenu-slider
+							.swiper.submenu-slider-js
+								.swiper-wrapper
+									+subMenuSlide('Разработка НТД корпоративного уровня ПАО «Газпром')
+									+subMenuSlide('Разработка НТД национального и межгосударственного уровня', 'active')
+									+subMenuSlide('Разработка организационно-методических документов по оценке соответствия')
+									+subMenuSlide('Участие представителей ПАО «Газпром» в комиссиях, советах и рабочих группах по техническому регулированию и стандартизации')
+									+subMenuSlide('Участие представителей АСОГО в Технических комитетах по стандартизации')
+									+subMenuSlide('Перечень утвержденных и введенных в действие НТД')
+					.col-lg-8
+						//
+	// end sPersonalCab
+
+mixin subMenuSlide(txt,addClasses='')
+	.swiper-slide
+		+e.sb-mnu-link(href="#" class=addClasses)=txt
+
+mixin sPersonalCabSlide(txt, addClasses='')
+	.swiper-slide
+		+e.sl-link(href="#" class=addClasses)=txt
+
+mixin sPersonalCabTRCol(txt)
+	+e.tr-col.col-md-auto
+		a(href="#")=txt

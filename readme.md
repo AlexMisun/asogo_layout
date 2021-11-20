@@ -10,3 +10,5 @@
 1. <https://luckyone1221.github.io/0098ACOGO/public/07-partners.html>
 1. <https://luckyone1221.github.io/0098ACOGO/public/08-news-open.html>
 1. <https://luckyone1221.github.io/0098ACOGO/public/09-membership.html>
+1. <https://luckyone1221.github.io/0098ACOGO/public/010-personal-cab.html>
+1. <https://luckyone1221.github.io/0098ACOGO/public/011-certification.html>
