@@ -1,0 +1,79 @@
+// start .sRegistr
+.sRegistr {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(50)};
+		--sTPB: #{rem(40)};
+	}
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(43)};
+		--sTPB: #{rem(34)};
+	}
+	@include media-breakpoint-up(base){
+		margin-top: -13px;
+	}
+	.section-title{
+		h1, h2{
+			font-size: rem(32) !important;
+			@include media-breakpoint-up(xl){
+				font-size: rem(54) !important;
+			}
+		}
+
+		@include media-breakpoint-up(base){
+			max-width: 65%;
+		}
+	}
+	&__row{
+		--bs-gutter-y: #{rem(36)};
+	}
+
+	&__sub-row{
+		--bs-gutter-y: #{rem(40)};
+	}
+	&__title{
+		line-height: 1.7;
+
+		font-size: rem(20);
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(lg){
+			font-size: rem(24);
+			margin-bottom: rem(32);
+		}
+	}
+	&__links{
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(32);
+		}
+
+		& > span{
+			display: block;
+			font-size: rem(14);
+			@include media-breakpoint-up(lg){
+				font-size: rem(16);
+			}
+			margin-bottom: rem(16);
+
+			line-height: 1.7;
+			color: $gray-710;
+		}
+		& > a{
+			display: block;
+
+			font-size: rem(16);
+			line-height: 1.6;
+			@include media-breakpoint-up(base){
+				font-size: rem(20);
+				line-height: 1.7;
+			}
+
+			margin-bottom: rem(12);
+		}
+	}
+	&__{}
+} // end.sRegistr

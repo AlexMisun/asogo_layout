@@ -1,0 +1,134 @@
+// start .sCerts
+.sCerts {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(50)};
+		--sTPB: #{rem(40)};
+	}
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(31)};
+		--sTPB: #{rem(48)};
+		margin-top: -18px;
+	}
+
+	&__container{
+		@include media-breakpoint-up(base){
+			padding-right: rem(25);
+		}
+	}
+
+	&__top-row{
+		--bs-gutter-x: #{rem(12)};
+		--bs-gutter-y: #{rem(12)};
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			--bs-gutter-x: #{rem(24)};
+			--bs-gutter-y: #{rem(18)};
+			margin-bottom: rem(46);
+		}
+		@include media-breakpoint-up(base){
+			--bs-gutter-x: #{rem(56)};
+		}
+	}
+	&__link{
+		font-size: rem(16);
+		@include media-breakpoint-up(xxl){
+			font-size: rem(20);
+		}
+		line-height: 1.7;
+
+
+		&.active{
+			color: $gray-710!important;
+		}
+	}
+	.section-title{
+		h1{
+			font-size: rem(32) !important;
+			@include media-breakpoint-up(xl){
+				font-size: rem(54) !important;
+			}
+		}
+	}
+	&__items{
+
+	}
+	&__item{
+		background: $gray-200;
+
+		padding: rem(24) rem(16);
+		@include media-breakpoint-up(md){
+			padding: rem(24);
+		}
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(24);
+			padding: rem(28) rem(38) rem(31);
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__title{
+		font-size: rem(16);
+		@include media-breakpoint-up(md){
+			font-size: rem(20);
+		}
+		@include media-breakpoint-up(lg){
+			font-size: rem(24);
+		}
+		line-height: 1.7;
+		color: $blue;
+
+		margin-bottom: rem(8);
+	}
+	&__gray{
+		font-size: rem(12);
+		line-height: calc(14/12);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(24);
+			font-size: rem(14);
+			line-height: calc(17/14);
+		}
+
+		color: $gray-710;
+	}
+	&__row{
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
+		@include media-breakpoint-up(lg){
+			--bs-gutter-x: #{rem(24)};
+			--bs-gutter-y: #{rem(24)};
+		}
+	}
+	&__char{}
+	&__key{
+		font-size: rem(11);
+		margin-bottom: rem(6);
+		@include media-breakpoint-up(md){
+			font-size: rem(12);
+			margin-bottom: rem(10);
+		}
+
+		line-height: 1.5;
+		color: $black;
+	}
+	&__val{
+		font-size: rem(12);
+		line-height: calc(14/12);
+		@include media-breakpoint-up(md){
+			font-size: rem(14);
+			line-height: calc(17/14);
+		}
+		color: $gray-710;
+	}
+
+	//
+	&__{}
+	&__{}
+} // end.sCerts

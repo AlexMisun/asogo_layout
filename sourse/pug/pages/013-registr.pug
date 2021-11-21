@@ -22,13 +22,14 @@ include ../blocks/sMaterials/_sMaterials.pug
 include ../blocks/sPersonalCab/_sPersonalCab.pug
 include ../blocks/sCertification/_sCertification.pug
 include ../blocks/sAdmition/_sAdmition.pug
+include ../blocks/sRegistr/_sRegistr.pug
 
 block variables
 	- let  mainPage= ''
-	- let  bg='012.png'
+	- let  bg='013.png'
 
 block title
-	- let  title= '012'
+	- let  title= '013'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -39,5 +40,5 @@ block pagecontent
 			+breadcrumb('АСОГО', 'Сертификация', 'Признание компетентности')
 			+e.back-link(href="#")
 				+icon('arrow-l')
-	+sAdmition()
+	+sRegistr()
 	+footer()(class="has-bt")

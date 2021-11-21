@@ -1,0 +1,46 @@
+mixin sCerts(data)
+	// start sCerts
+	+b.SECTION.sCerts.section.pt-0#sCerts&attributes(attributes)
+		+e.container.container
+			+e.top-row.row
+				+sCertsTopLink('Органы по сертификации', 'active')
+				+sCertsTopLink('Испытательные лаборатории')
+				+sCertsTopLink('Учебные центры')
+				+sCertsTopLink('Консалтинговые организации')
+				+sCertsTopLink('Технические эксперты')
+				+sCertsTopLink('Эксперты по подтверждению компетентности')
+				+sCertsTopLink('Эксперты по сертификации (продукция)')
+				+sCertsTopLink('Эксперты по сертификации (работы, услуги)')
+				//-+sCertsTopLink('')
+			+b.section-title
+				h1 Органы сертификации
+			+e.items
+				-for(var i = 0; i < 5; i++)
+					+sCertsItem()
+	// end sCerts
+
+mixin sCertsItem()
+	+e.item
+		+e.title ООО «Новые технологии качества»
+		+e.gray Российская Федерация, 127018, г. Москва, ул. Полковая, дом 3, строение 6, этаж 6, пом. I (офис 5)
+		+e.row.row
+			.col-md-6.col-lg-3
+				+sCertsChar('Рег. номер', 'Шипалова Алла Евгеньевна')
+			.col-md-6.col-lg-3
+				+sCertsChar('Дата выдачи / Срок действия', '27.06.2018 / 26.06.2021')
+			.col-md-6.col-lg-3
+				+sCertsChar('ФИО руководителя ОС', 'Шипалова Алла Евгеньевна')
+			.col-md-6.col-lg-3
+				+sCertsChar('Наименование органа по сертификации', 'ООО «Новые технологии качества»')
+			.col-12
+				+sCertsChar('Объекты сертификации', '13.20; 13.95; 13.96; 20.30.1 (за исключением материалов для нанесения внутренних гладкостных покрытий, применяемых для трубной продукции); 22.21; 22.23; 22.29; 23.14; 23.19; 23.61; 23.99; 25.11; 25.93; 25.99; 26.51; 28.24; 28.92 (за исключением 28.92.27, 28.92.28).')
+
+
+mixin sCertsTopLink(txt, addClasses='')
+	.col-auto
+		+e.link(href="#" class=addClasses)=txt
+
+mixin sCertsChar(key, val)
+	+e.char
+		+e.key=key
+		+e.val=val

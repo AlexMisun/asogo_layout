@@ -1,0 +1,45 @@
+mixin sRegistr(data)
+	// start sRegistr
+	+b.SECTION.sRegistr.section.pt-0#sRegistr&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Реестр свидетельств и сертификатов
+			+e.row.row
+				.col-lg-8
+					+e.sub-row.row
+						.col-md-6
+							+e.title Участники Системы
+							+e.links
+								a(href="#") Органы по сертификации
+								a(href="#") Испытательные лаборатории
+								a(href="#") Учебные центры
+								a(href="#") Консалтинговые организации
+								a(href="#") Эксперты по подтверждению компетентности
+								a(href="#") Эксперты по сертификации (продукция)
+								a(href="#") Эксперты по сертификации (работы, услуги)
+								a(href="#") Технические эксперты
+						.col-md-6
+							+e.title Сертификаты соответствия
+							+e.links
+								span Действующие
+								a(href="#") Продукция
+								a(href="#") Работы и услуги
+							+e.links
+								span Приостановленные
+								a(href="#") Продукция
+								a(href="#") Работы и услуги
+							+e.links
+								span Отмененные
+								a(href="#") Продукция
+								a(href="#") Работы и услуги
+				.col-lg-4.order-first.order-lg-0
+					+b.adm-filter--js
+						+e.btn.d-lg-none.adm-filter-btn-js
+							+sAdmitionFilterItem(5, 'Реестр свидетельств и сертификатов', true)
+						+e.items.adm-filter-items-js
+							+sAdmitionFilterItem(1, 'Структура Системы')(href="#")
+							+sAdmitionFilterItem(2, 'Объекты сертификации')(href="#")
+							+sAdmitionFilterItem(3, 'Признание компетентности')(href="#")
+							+sAdmitionFilterItem(4, 'Сертификация')(href="#")
+							+sAdmitionFilterItem(5, 'Реестр свидетельств и сертификатов')(class="active")
+	// end sRegistr

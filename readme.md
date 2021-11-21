@@ -12,3 +12,6 @@
 1. <https://luckyone1221.github.io/0098ACOGO/public/09-membership.html>
 1. <https://luckyone1221.github.io/0098ACOGO/public/010-personal-cab.html>
 1. <https://luckyone1221.github.io/0098ACOGO/public/011-certification.html>
+1. <https://luckyone1221.github.io/0098ACOGO/public/012-admition.html>
+1. <https://luckyone1221.github.io/0098ACOGO/public/013-registr.html>
+1. <https://luckyone1221.github.io/0098ACOGO/public/014-certs.html>

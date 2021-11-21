@@ -635,6 +635,10 @@ iframe {
 		@include media-breakpoint-up(lg){
 			margin-bottom: var(--back-link-md, #{rem(34)});
 		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+
 		//26px
 		.icon{
 			//color: $white;
@@ -784,9 +788,9 @@ iframe {
 			margin-right: 2px;
 		}
 
-		margin-bottom: rem(11);
+		margin-bottom: rem(10);
 		@include media-breakpoint-up(lg){
-			margin-bottom: rem(13);
+			margin-bottom: rem(12);
 		}
 		padding-left: rem(33);
 

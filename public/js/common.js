@@ -412,7 +412,27 @@ function eventHandler() {
 		spaceBetween: 46,
 		...freeMomentum,
 	});
-	//
+
+	//.adm-filter-items-js
+	//.adm-filter-btn-js
+	//.adm-filter--js
+	let admMissclick = function (btn, items){
+		if (!event.target.closest('.adm-filter--js') && !event.target.closest('.adm-filter-btn-js')){
+			$(btn).removeClass('active');
+			$(items).removeClass('active');
+		}
+	};
+
+	$('.adm-filter--js').each(function (){
+		let btn = this.querySelector('.adm-filter-btn-js');
+		let items = this.querySelector('.adm-filter-items-js');
+
+		$(btn).click(function (){
+			$(items).toggleClass('active');
+		});
+
+		document.body.addEventListener('click', admMissclick.bind(btn, items));
+	})
 
 
 	// modal window

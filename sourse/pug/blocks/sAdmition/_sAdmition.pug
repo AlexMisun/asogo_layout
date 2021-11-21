@@ -28,16 +28,16 @@ mixin sAdmition(data)
 							+sAdmitionGItem('globe', 'Подача заявки осуществляется на сайте', 'intergazcert.ru')(href="intergazcert.ru" target="_blank")
 						+e.g-title По вопросам подтверждения компетенции и сертификации
 						+e.g-row.row
-							+sAdmitionGItem('tel', 'По вопросам сертификации', '8(495) 369-12-24')
+							+sAdmitionGItem('tell', 'По вопросам сертификации', '8(495) 369-12-24')
 							+sAdmitionGItem('mail', 'По всем вопросам', 'asogo@asogo.ru')(href="mailto:asogo@asogo.ru")
-				.col-lg-4
-					+b.adm-filter
-						+e.btn
-							+sAdmitionFilterItem(5, 'Реестр свидетельств и сертификатов', true)
-						+e.items
+				.col-lg-4.order-first.order-lg-0
+					+b.adm-filter--js
+						+e.btn.d-lg-none.adm-filter-btn-js
+							+sAdmitionFilterItem(3, 'Признание компетентности', true)
+						+e.items.adm-filter-items-js
 							+sAdmitionFilterItem(1, 'Структура Системы')(href="#")
 							+sAdmitionFilterItem(2, 'Объекты сертификации')(href="#")
-							+sAdmitionFilterItem(3, 'Признание компетентности')(href="#")
+							+sAdmitionFilterItem(3, 'Признание компетентности')(class="active")
 							+sAdmitionFilterItem(4, 'Сертификация')(href="#")
 							+sAdmitionFilterItem(5, 'Реестр свидетельств и сертификатов')(href="#")
 	// end sAdmition
@@ -52,10 +52,9 @@ mixin sAdmitionGItem(iconName, gray, txt)
 					+e.gray=gray
 					+e.txt&attributes(attributes)=txt
 
-
 mixin sAdmitionFilterItem(imgNum, txt, chevronDown)
 	+e.item&attributes(attributes)
-		+e.i-row.row
+		+e.i-row.row.align-items-center
 			+e.col--img.col-auto
 				img(loading="lazy" src=`img/svg/sAdmitionItem-${imgNum}.svg` alt="")
 			+e.col--txt.col=txt
