@@ -17,7 +17,7 @@
   @include media-breakpoint-up(lg){
     --bs-body-font-size: 14px;
   }
-  @include media-breakpoint-up(xl){
+  @include media-breakpoint-up(xxl){
     --bs-body-font-size: #{$em-base};
   }
 

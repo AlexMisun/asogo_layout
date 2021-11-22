@@ -11,17 +11,23 @@
 		--sPB: #{rem(67)};
 		--sTPB: #{rem(223)};
 	}
+	@include media-breakpoint-up(xl) {
+		--sPT: calc(var(--header-h) + #{rem(40)});
+		--sPB: #{rem(40)};
+		--sTPB: #{rem(40)};
+	}
 	@include media-breakpoint-up(xxl){
-		--sPT: #{rem(250)};
+		--sPT: #{rem(200)};
 		--sPB: #{rem(50)};
 		--sTPB: #{rem(118)};
 	}
 
 	background-color: $primary;
 	color: $white;
-	//min-height: calc(var(--vh, 1vh) * 100);
+
 	@include media-breakpoint-up(xl){
-		min-height: 1015px;
+		min-height: calc(var(--vh, 1vh) * 100);
+		//min-height: 1015px;
 	}
 
 	position: relative;

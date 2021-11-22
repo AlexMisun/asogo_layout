@@ -21,7 +21,8 @@ mixin top-nav(data)
 					+e.logo(href="#")
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
 				.col.d-none.d-lg-block
-					+mnu()
+					+e.menu-wrap
+						+mnu()
 				if data && data.isLogged
 					.col-auto
 						//-+e.ig

@@ -9,9 +9,9 @@
 	//	padding: rem(20) 0;
 	//}
 
-	padding: var(--tn-pt, #{rem(16) 0});
+	padding: var(--tn-pt, #{16px 0});
 	@include media-breakpoint-up(base){
-		padding: var(--tn-pt, 46px 0 49px);
+		padding: var(--tn-pt, 37.5px 0);
 	}
 
 	//-
@@ -47,10 +47,15 @@
 			height: auto;
 		}
 	}
+
+	&__menu-wrap{
+		max-width: 700px;
+	}
+
 	//
 	.menu{
 		padding: 0;
-		margin: 0;
+		margin: 0 0 rem(-4);
 		list-style: none;
 
 		display: flex;
@@ -58,6 +63,8 @@
 		flex-wrap: wrap;
 
 		.menu-item{
+			margin-bottom: rem(4);
+
 			margin-right: rem(24);
 			@include media-breakpoint-up(xl){
 				margin-right: rem(32.5);
@@ -103,7 +110,7 @@
 		align-items: center;
 		.icon{
 			flex-shrink: 0;
-			@include mt();
+			//@include mt();
 			font-size: rem(15);
 			margin-right: rem(10);
 			color: currentColor;

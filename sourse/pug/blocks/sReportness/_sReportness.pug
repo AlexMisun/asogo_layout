@@ -1,0 +1,26 @@
+mixin sReportness(data)
+	// start sReportness
+	+b.SECTION.sReportness.section.pt-0#sReportness&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Отчетность
+			+e.items
+				+sReportnessItem('Отчет о деятельности АСОГО и о персональном составе ее руководящих органов за 2017 год, форма ОН0001')
+				+sReportnessItem('Отчет о расходовании АСОГО денежных средств и об использовании иного имущества за 2017 год, форма ОН0002')
+				+sReportnessItem('Отчет о расходовании АСОГО денежных средств и об использовании иного имущества за 2018 год, форма ОН0002')
+				+sReportnessItem('Отчет о деятельности АСОГО и о персональном составе ее руководящих органов за 2018 год, форма ОН0001')
+				+sReportnessItem('Отчет о расходовании АСОГО денежных средств и об использовании иного имущества за 2019 год, форма ОН0002')
+				+sReportnessItem('Отчет о деятельности АСОГО и о персональном составе ее руководящих органов за 2019 год, форма ОН0001')
+				+sReportnessItem('Отчет о деятельности АСОГО и о персональном составе ее руководящих органов за 2020 год, форма ОН0001')
+				+sReportnessItem('Отчет о расходовании АСОГО денежных средств и об использовании иного имущества за 2020 год, форма ОН0002')
+				//
+	// end sReportness
+
+mixin sReportnessItem(title)
+	+e.item(href="#")
+		+e.i-row.row
+			+e.col--img.col-auto
+				img(loading="lazy" src=`img/svg/xls.svg` alt="")
+			+e.col--txt.col
+				+e.title=title
+				+e.gray xlsx 1.3 mb

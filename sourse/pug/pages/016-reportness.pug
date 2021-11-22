@@ -19,24 +19,27 @@ include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sArticle/_sArticle.pug
 include ../blocks/sMembership/_sMembership.pug
 include ../blocks/sMaterials/_sMaterials.pug
+include ../blocks/sPersonalCab/_sPersonalCab.pug
+include ../blocks/sCertification/_sCertification.pug
+include ../blocks/sAdmition/_sAdmition.pug
+include ../blocks/sRegistr/_sRegistr.pug
+include ../blocks/sCerts/_sCerts.pug
+include ../blocks/sTech/_sTech.pug
+include ../blocks/sReportness/_sReportness.pug
 
 block variables
 	- let  mainPage= ''
-	- let  bg='09.png'
+	- let  bg='016.png'
 
 block title
-	- let  title= '09'
+	- let  title= '016'
 	title= title
 block pagecontent
 	+mob-mnu()
 	+header()
-		+top-nav()
+		+top-nav({})
 	+b.page-head
 		.container
-			+breadcrumb('АСОГО', 'Членство')
-	+sMembership()
-	+sMembers({
-		title: 'Члены Ассоциации',
-	})(class="sMembers--alt2")
-	//-+sMaterials()
+			+breadcrumb('АСОГО', 'Техническое ругелирование и стандартизация')
+	+sReportness()
 	+footer()(class="has-bt")

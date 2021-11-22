@@ -57,6 +57,8 @@
 			}
 
 			li{
+				color: $gray-710;
+				font-weight: 400!important;
 				margin-bottom: rem(12) !important;
 				@include media-breakpoint-up(lg){
 					margin-bottom: rem(12) !important;

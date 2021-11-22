@@ -11,7 +11,7 @@ mixin sEducation(data)
 
 mixin sEducationItem(imgNum, title, descr)
 	.col-md-6
-		+e.item
+		+e.item(href="#")
 			+pic(`sEducation-${imgNum}.jpg`)(class="sEducation__img")
 			+e.title=title
 			+e.descr=descr

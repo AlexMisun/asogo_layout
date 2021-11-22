@@ -1,0 +1,22 @@
+mixin sTech(data)
+	// start sTech
+	+b.SECTION.sTech.section.pt-0#sTech&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h1 Техническое ругелирование и стандартизация
+			+e.row.row
+				+sTechItem(1, 'Разработка НТД корпоративного уровня ПАО «Газпром')
+				+sTechItem(2, 'Разработка НТД национального и межгосударственного уровня')
+				+sTechItem(3, 'Разработка организационно-методических документов по оценке соответствия')
+				+sTechItem(4, 'Участие представителей АСОГО в комиссиях, советах и рабочих группах по техническому регулированию и стандартизации')
+				+sTechItem(5, 'Участие представителей АСОГО в Технических комитетах по стандартизации')
+				+sTechItem(6, 'Перечень утвержденных и введенных в действие НТД')
+	// end sTech
+
+mixin sTechItem(imgNum, txt)
+	.col-md-6.col-lg-4
+		+e.item(href="#")
+			+e.i-row.row.align-items-center
+				+e.col--img.col-auto
+					img(loading="lazy" src=`img/svg/sTech-${imgNum}.svg` alt="")
+				+e.col--txt.col=txt

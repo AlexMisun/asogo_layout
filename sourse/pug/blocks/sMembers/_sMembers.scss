@@ -120,6 +120,11 @@
 		color: var(--title-col, #{rgba($gray-710, .5)});
 	}
 	&__links{
+		display: block;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
 		&--3{
 			@include media-breakpoint-up(sm){
 				columns: 2;
@@ -130,7 +135,7 @@
 		}
 		&--1{}
 
-		a{
+		li{
 			display: block;
 
 			font-size: rem(12);
@@ -138,12 +143,13 @@
 				font-size: rem(14);
 			}
 			margin-bottom: rem(8);
+		}
+		a{
 			line-height: 1.4;
 			color: var(--links-col, #{$primary});
 			&:hover{
 				color: var(--links-hover-col, #{$primary});
 			}
-
 			//color: #123295;
 		}
 	}
