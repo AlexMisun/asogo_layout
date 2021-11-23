@@ -24,7 +24,7 @@ include ../blocks/sReportness/_sReportness.pug
 
 block variables
 	- let  mainPage= ''
-	- let  bg='010-320.png'
+	- let  bg='018.png'
 
 block title
 	- let  title= '010'
@@ -39,4 +39,18 @@ block pagecontent
 		.container
 			+breadcrumb('АСОГО', 'Личный кабинет')
 	+sPersonalCab()
+		+b.sFeedBack
+			.container
+				+e.title Задайте вопрос нашим специалистам
+				+form-wrap()
+					+e.row.row
+						.col-lg-4
+							+input('Ваше ФИО', 'text', 'Ваше ФИО')(value="Голоборотьков Виктор Александрович ")
+						.col-lg-4
+							+input('Email', 'email', 'E-mail (туда мы пришлем ответ)')(value="sample@sample.com")
+						.col-lg-4
+							+input('Обучение', 'select', 'Выберите направление')
+						.col-12
+							+input('Введите', 'textarea', 'Ваш вопрос')
+					+e.btn(type="submit") Отправить
 	+footer()(class="has-bt")

@@ -17,3 +17,6 @@
 1. <https://luckyone1221.github.io/0098ACOGO/public/014-certs.html>
 1. <https://luckyone1221.github.io/0098ACOGO/public/015-tech.html>
 1. <https://luckyone1221.github.io/0098ACOGO/public/016-reportness.html>
+1. <https://luckyone1221.github.io/0098ACOGO/public/017-enter.html>
+1. <https://luckyone1221.github.io/0098ACOGO/public/018-feedback.html>
+1. <https://luckyone1221.github.io/0098ACOGO/public/019-prof-edit.html>

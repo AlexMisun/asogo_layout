@@ -32,6 +32,7 @@
 			background-position: top center;
 			background-size: contain;
 		}
+
 	}
 	.section-title{
 		h2{
@@ -164,9 +165,40 @@
 	align-items: center;
 	cursor: pointer;
 
+	&--alt{
+		input:checked + .square{
+			background-color: $primary;
+			border-color: $primary;
+		}
+
+		.square{
+
+			width: rem(16) !important;
+			height: rem(16) !important;
+			margin-right: rem(16) !important;
+			@include media-breakpoint-up(lg){
+				margin-right: rem(19) !important;
+			}
+
+			&:after{
+				width: rem(10) !important;
+				height: rem(10) !important;
+
+				background-image: url(../img/svg/check-white.svg) !important;
+			}
+		}
+
+		.txt{
+			@include media-breakpoint-up(lg){
+				font-size: rem(14) !important;
+				line-height: calc(16/14) !important;
+			}
+		}
+	}
+
 	input:checked + .square{
 		&:after{
-			content: '';
+			opacity: 1;
 		}
 	}
 
@@ -184,6 +216,8 @@
 
 		position: relative;
 		&:after{
+			@include mt();
+			opacity: 0;
 			content: '';
 			position: absolute;
 			width: rem(12);

@@ -21,13 +21,14 @@ include ../blocks/sMembership/_sMembership.pug
 include ../blocks/sMaterials/_sMaterials.pug
 include ../blocks/sPersonalCab/_sPersonalCab.pug
 include ../blocks/sReportness/_sReportness.pug
+include ../blocks/sProfEdit/_sProfEdit.pug
 
 block variables
 	- let  mainPage= ''
-	- let  bg='010-320.png'
+	- let  bg='019.png'
 
 block title
-	- let  title= '010'
+	- let  title= '019'
 	title= title
 block pagecontent
 	+mob-mnu()
@@ -37,6 +38,8 @@ block pagecontent
 		})
 	+b.page-head
 		.container
-			+breadcrumb('АСОГО', 'Личный кабинет')
-	+sPersonalCab()
+			+breadcrumb('АСОГО', 'Редактирование профиля')
+			+e.back-link(href="#")
+				+icon('arrow-l')
+	+sProfEdit()
 	+footer()(class="has-bt")

@@ -1,0 +1,16 @@
+mixin sEnter(data)
+	// start sEnter
+	+b.SECTION.sEnter.section#sEnter&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Вход в личный кабинет
+			+form-wrap
+				+e.inputs
+					+input('Введите', 'email', 'Ваш логин (e-mail)')
+					+input('Введите', 'password', 'Пароль')
+				+e.foot-row.row.align-items-center
+					.col-auto
+						+e.btn(type="submit") Войти
+					.col
+						+e.link(href="#") Забыли пароль?
+	// end sEnter

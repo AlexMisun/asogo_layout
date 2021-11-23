@@ -20,23 +20,24 @@ include ../blocks/sArticle/_sArticle.pug
 include ../blocks/sMembership/_sMembership.pug
 include ../blocks/sMaterials/_sMaterials.pug
 include ../blocks/sPersonalCab/_sPersonalCab.pug
+include ../blocks/sCertification/_sCertification.pug
+include ../blocks/sAdmition/_sAdmition.pug
+include ../blocks/sRegistr/_sRegistr.pug
+include ../blocks/sCerts/_sCerts.pug
+include ../blocks/sTech/_sTech.pug
 include ../blocks/sReportness/_sReportness.pug
+include ../blocks/sEnter/_sEnter.pug
 
 block variables
-	- let  mainPage= ''
-	- let  bg='010-320.png'
+	- let  mainPage= 'blue-page'
+	- let  bg='017.png'
 
 block title
-	- let  title= '010'
+	- let  title= '017'
 	title= title
 block pagecontent
 	+mob-mnu()
 	+header()
-		+top-nav({
-			isLogged: true,
-		})
-	+b.page-head
-		.container
-			+breadcrumb('АСОГО', 'Личный кабинет')
-	+sPersonalCab()
-	+footer()(class="has-bt")
+		+top-nav({})
+	+sEnter()
+	+footer()(class="white")

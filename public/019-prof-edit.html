@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>016</title>
+		<title>019</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -11,7 +11,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="016.png">
+	<body data-bg="019.png">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -63,11 +63,15 @@
 								</div>
 							</div>
 							<div class="col-auto">
-								<a class="top-nav__btn" href="#">
-									<svg class="icon icon-user ">
-										<use xlink:href="img/svg/sprite.svg#user"></use>
-									</svg><span>Войти</span>
-								</a>
+								<div class="input-group">
+									<a class="top-nav__btn top-nav__btn--personal-cab" href="#">
+										<svg class="icon icon-user ">
+											<use xlink:href="img/svg/sprite.svg#user"></use>
+										</svg><span class="d-none d-sm-inline">Виктор А.</span>
+									</a>
+									<a class="top-nav__btn" href="#"><span>Выйти</span>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -80,119 +84,115 @@
 					<nav class="breadcrumb-wrap swiper breadcrumb-slider-js">
 						<ol class="breadcrumb swiper-wrapper">
 							<li class="breadcrumb-item swiper-slide"><a href="/"><span>АСОГО</span></a></li>
-							<li class="breadcrumb-item swiper-slide"><a href="#"><span>Техническое ругелирование и стандартизация</span></a></li>
+							<li class="breadcrumb-item swiper-slide"><a href="#"><span>Редактирование профиля</span></a></li>
 						</ol>
 					</nav>
+					<a class="page-head__back-link" href="#">
+						<svg class="icon icon-arrow-l ">
+							<use xlink:href="img/svg/sprite.svg#arrow-l"></use>
+						</svg>
+					</a>
 				</div>
 			</div>
-			<!-- start sReportness-->
-			<section class="sReportness section pt-0" id="sReportness">
+			<!-- start sProfEdit-->
+			<section class="sProfEdit section pt-0" id="sProfEdit">
 				<div class="container">
 					<div class="section-title">
-						<h1>Отчетность</h1>
+						<h1>Редактирование профиля</h1>
 					</div>
-					<div class="reportness-bl">
-						<a class="reportness-bl__item" href="#">
-							<div class="reportness-bl__i-row row">
-								<div class="reportness-bl__col reportness-bl__col--img col-auto"><img loading="lazy" src="img/svg/xls.svg" alt=""/>
-								</div>
-								<div class="reportness-bl__col reportness-bl__col--txt col">
-									<div class="reportness-bl__title">Отчет о деятельности АСОГО и о персональном составе ее руководящих органов за 2017 год, форма ОН0001
+					<div class="sProfEdit__main-row row">
+						<div class="col-lg-8 col-xl-7 col-base-6">
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__title">Личные данные
 									</div>
-									<div class="reportness-bl__gray">xlsx 1.3 mb
+									<div class="form-wrap__row row">
+										<div class="col-lg-12">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">ФИО</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите" value="Голоборотьков Виктор Александрович "/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-md-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Компания</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите" value="ПАО “Назпром”"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-md-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Должность</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите" value="Руководитель отдела"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
 									</div>
+									<div class="form-wrap__title">Контакты
+									</div>
+									<div class="form-wrap__row row pb-1">
+										<div class="col-md-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">e-mail</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Введите" value="sample@sample.com"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-md-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Телефон</span><input class="form-wrap__input form-control" name="tell" type="tell" placeholder="Введите" value="+7 985 999 88 88"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+									</div>
+									<div class="form-wrap__checkboxes">
+										<label class="policy-chb policy-chb--alt">
+											<input class="invisible" type="checkbox" checked="checked"/><span class="square"></span><span class="txt">Получать уведомления на email об ответах через форму чата в ЛК</span>
+										</label>
+										<label class="policy-chb policy-chb--alt">
+											<input class="invisible" type="checkbox"/><span class="square"></span><span class="txt">Получать новости компании на e-mail</span>
+										</label>
+									</div>
+									<button class="form-wrap__btn form-wrap__btn--save" type="submit">Сохранить изменения
+									</button>
+								</form>
+							</div>
+						</div>
+						<div class="col-lg-4 offset-base-2 offset-xl-1">
+							<div class="sProfEdit__box">
+								<div class="form-wrap">
+									<form>
+										<div class="form-wrap__title">Смена пароля
+										</div>
+										<div class="form-wrap__inputs">
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Старый пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Новый пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="form-wrap__input-wrap form-group">
+												<label><span class="form-wrap__input-title">Повторите пароль</span><input class="form-wrap__input form-control" name="password" type="password" placeholder="Введите"/>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<button class="form-wrap__btn form-wrap__btn--pass" type="submit">Сменить пароль
+										</button>
+									</form>
 								</div>
 							</div>
-						</a>
-						<a class="reportness-bl__item" href="#">
-							<div class="reportness-bl__i-row row">
-								<div class="reportness-bl__col reportness-bl__col--img col-auto"><img loading="lazy" src="img/svg/xls.svg" alt=""/>
-								</div>
-								<div class="reportness-bl__col reportness-bl__col--txt col">
-									<div class="reportness-bl__title">Отчет о расходовании АСОГО денежных средств и об использовании иного имущества за 2017 год, форма ОН0002
-									</div>
-									<div class="reportness-bl__gray">xlsx 1.3 mb
-									</div>
-								</div>
-							</div>
-						</a>
-						<a class="reportness-bl__item" href="#">
-							<div class="reportness-bl__i-row row">
-								<div class="reportness-bl__col reportness-bl__col--img col-auto"><img loading="lazy" src="img/svg/xls.svg" alt=""/>
-								</div>
-								<div class="reportness-bl__col reportness-bl__col--txt col">
-									<div class="reportness-bl__title">Отчет о расходовании АСОГО денежных средств и об использовании иного имущества за 2018 год, форма ОН0002
-									</div>
-									<div class="reportness-bl__gray">xlsx 1.3 mb
-									</div>
-								</div>
-							</div>
-						</a>
-						<a class="reportness-bl__item" href="#">
-							<div class="reportness-bl__i-row row">
-								<div class="reportness-bl__col reportness-bl__col--img col-auto"><img loading="lazy" src="img/svg/xls.svg" alt=""/>
-								</div>
-								<div class="reportness-bl__col reportness-bl__col--txt col">
-									<div class="reportness-bl__title">Отчет о деятельности АСОГО и о персональном составе ее руководящих органов за 2018 год, форма ОН0001
-									</div>
-									<div class="reportness-bl__gray">xlsx 1.3 mb
-									</div>
-								</div>
-							</div>
-						</a>
-						<a class="reportness-bl__item" href="#">
-							<div class="reportness-bl__i-row row">
-								<div class="reportness-bl__col reportness-bl__col--img col-auto"><img loading="lazy" src="img/svg/xls.svg" alt=""/>
-								</div>
-								<div class="reportness-bl__col reportness-bl__col--txt col">
-									<div class="reportness-bl__title">Отчет о расходовании АСОГО денежных средств и об использовании иного имущества за 2019 год, форма ОН0002
-									</div>
-									<div class="reportness-bl__gray">xlsx 1.3 mb
-									</div>
-								</div>
-							</div>
-						</a>
-						<a class="reportness-bl__item" href="#">
-							<div class="reportness-bl__i-row row">
-								<div class="reportness-bl__col reportness-bl__col--img col-auto"><img loading="lazy" src="img/svg/xls.svg" alt=""/>
-								</div>
-								<div class="reportness-bl__col reportness-bl__col--txt col">
-									<div class="reportness-bl__title">Отчет о деятельности АСОГО и о персональном составе ее руководящих органов за 2019 год, форма ОН0001
-									</div>
-									<div class="reportness-bl__gray">xlsx 1.3 mb
-									</div>
-								</div>
-							</div>
-						</a>
-						<a class="reportness-bl__item" href="#">
-							<div class="reportness-bl__i-row row">
-								<div class="reportness-bl__col reportness-bl__col--img col-auto"><img loading="lazy" src="img/svg/xls.svg" alt=""/>
-								</div>
-								<div class="reportness-bl__col reportness-bl__col--txt col">
-									<div class="reportness-bl__title">Отчет о деятельности АСОГО и о персональном составе ее руководящих органов за 2020 год, форма ОН0001
-									</div>
-									<div class="reportness-bl__gray">xlsx 1.3 mb
-									</div>
-								</div>
-							</div>
-						</a>
-						<a class="reportness-bl__item" href="#">
-							<div class="reportness-bl__i-row row">
-								<div class="reportness-bl__col reportness-bl__col--img col-auto"><img loading="lazy" src="img/svg/xls.svg" alt=""/>
-								</div>
-								<div class="reportness-bl__col reportness-bl__col--txt col">
-									<div class="reportness-bl__title">Отчет о расходовании АСОГО денежных средств и об использовании иного имущества за 2020 год, форма ОН0002
-									</div>
-									<div class="reportness-bl__gray">xlsx 1.3 mb
-									</div>
-								</div>
-							</div>
-						</a>
-						<!---->
+						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end sReportness-->
+			<!-- end sProfEdit-->
 			<footer class="footer has-bt">
 				<div class="footer__container container">
 					<div class="footer__row row">

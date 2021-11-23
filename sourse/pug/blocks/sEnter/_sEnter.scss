@@ -1,0 +1,95 @@
+// start .sEnter
+.sEnter {
+	@include media-breakpoint-up(xxl) {
+		--sPT: #{rem(80)};
+		--sPB: #{rem(110px)};
+		--sTPB: #{rem(48)};
+	}
+
+	//-
+	.section-title{
+		h2{
+
+		}
+	}
+	.form-wrap{
+		margin: 0 auto;
+		max-width: rem(384);
+
+		&__inputs{
+
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(45);
+			}
+		}
+		&__input-wrap{
+			margin-bottom: rem(24);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(32);
+			}
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		&__input-title{
+			display: block;
+
+			font-size: rem(12);
+			line-height: calc(14/12);
+			@include media-breakpoint-up(lg){
+				font-size: rem(14);
+				line-height: 1.6;
+			}
+
+			margin-bottom: rem(10);
+		}
+		&__input{
+			color: $white;
+			border: 1px solid $white!important;
+			background-color: transparent!important;
+
+			font-size: rem(14);
+			line-height: 1.6;
+
+			padding: rem(16) rem(20);
+		}
+		//
+		&__foot-row{
+			--bs-gutter-x: #{rem(32s)};
+			@include media-breakpoint-up(lg){
+				--bs-gutter-x: #{rem(44)};
+			}
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-outline-white;
+			border-radius: 0;
+			padding: rem(10) rem(23);
+
+			font-weight: 500;
+			line-height: 1.7;
+
+			font-size: rem(16);
+			@include media-breakpoint-up(lg){
+				font-size: rem(20);
+			}
+
+			color: $white;
+		}
+		&__link{
+			color: $white!important;
+
+			font-size: rem(14);
+			@include media-breakpoint-up(lg){
+				font-size: rem(16);
+			}
+			line-height: 1.7;
+		}
+		&__{}
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sEnter

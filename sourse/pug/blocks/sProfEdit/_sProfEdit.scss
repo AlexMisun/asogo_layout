@@ -1,0 +1,149 @@
+// start .sProfEdit
+.sProfEdit {
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(120)};
+		--sTPB: #{rem(38)};
+		margin-top: -11px;
+	}
+
+	.section-title{
+		h1, h2{
+			@include media-breakpoint-down(lg){
+				font-size: rem(32)!important;
+			}
+			@include media-breakpoint-up(lg){
+				font-size: rem(54)!important;
+			}
+		}
+	}
+	&__main-row{
+		--bs-gutter-y: #{rem(30)};
+	}
+	&__box{
+		background: $input-bg;
+
+		padding: rem(30) rem(16);
+		@include media-breakpoint-up(sm){
+			padding: rem(32) rem(24);
+		}
+		@include media-breakpoint-up(lg){
+			padding: rem(48) rem(32);
+		}
+		@include media-breakpoint-up(base){
+			padding: rem(56) rem(65) rem(62) rem(70);
+
+			position: relative;
+			top: -16px;
+			left: -7px;
+		}
+	}
+
+	.form-wrap{
+		&__title{
+			font-weight: 500;
+			line-height: 1.7;
+			color: $primary;
+
+			font-size: rem(16);
+			@include media-breakpoint-up(lg){
+				font-size: rem(20);
+			}
+
+			margin-bottom: rem(16);
+		}
+		&__row{
+			--bs-gutter-y: #{rem(16)};
+			--bs-gutter-x: #{rem(24)};
+
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(40);
+			}
+		}
+		&__input-wrap{
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(24);
+			}
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		&__input-title{
+			display: block;
+			margin-bottom: rem(10);
+
+			font-size: rem(12);
+			@include media-breakpoint-up(lg){
+				font-size: rem(14);
+			}
+			line-height: 1.6;
+			color: $gray-710;
+		}
+		&__input{
+			padding: rem(12) rem(10);
+			@include media-breakpoint-up(md){
+				padding: rem(14) rem(20);
+			}
+			border: 1px solid $blue2;
+			background-color: transparent;
+
+			color: $primary;
+
+			font-size: rem(14);
+			@include media-breakpoint-up(xl){
+				font-size: rem(16);
+			}
+		}
+
+		&__checkboxes{
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(45);
+			}
+
+			& > *{
+				margin-bottom: rem(20);
+				@include media-breakpoint-up(lg){
+					margin-bottom: rem(30);
+				}
+
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__inputs{
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(38);
+			}
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-outline-primary;
+			font-weight: 500;
+			line-height: 1.7;
+			padding: rem(10) rem(23);
+
+
+			font-size: rem(16);
+			@include media-breakpoint-up(lg){
+				font-size: rem(20);
+			}
+			&--save{
+
+			}
+			&--pass{
+				width: 100%;
+			}
+		}
+		&__{}
+		&__{}
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sProfEdit

@@ -12,6 +12,7 @@ include ../blocks/sOrganisations/_sOrganisations.pug
 include ../blocks/sNews/_sNews.pug
 include ../blocks/sCert/_sCert.pug
 include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sPartner/_sPartner.pug
 
 block variables
 	- let  mainPage= 'main-page'
@@ -32,5 +33,5 @@ block pagecontent
 	+sOrganisations()
 	+sNews()
 	+sCert()
-	+sPartners({})
+	+sPartner({})(class="bg-blue")
 	+footer()

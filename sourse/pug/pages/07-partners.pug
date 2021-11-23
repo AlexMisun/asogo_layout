@@ -16,10 +16,11 @@ include ../blocks/sLogoes/_sLogoes.pug
 include ../blocks/sEducation/_sEducation.pug
 include ../blocks/sAdd/_sAdd.pug
 include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sPartner/_sPartner.pug
 
 block variables
 	- let  mainPage= ''
-	- let  bg='07.png'
+	- let  bg='07-1.png'
 
 block title
 	- let  title= '07'
@@ -31,7 +32,5 @@ block pagecontent
 	+b.page-head
 		.container
 			+breadcrumb('АСОГО', 'Партнеры')
-	+sPartners({
-		h1: true,
-	})(class="alt pt-0")
+	+sPartner()(class="pt-0")
 	+footer()(class="has-bt")

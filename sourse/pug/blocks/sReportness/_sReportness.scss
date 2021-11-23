@@ -12,6 +12,10 @@
 	&__items{
 
 	}
+	&__{}
+} // end.sReportness
+
+.reportness-bl{
 	&__item{
 		@include media-breakpoint-up(xl){
 			width: rem(793);
@@ -79,5 +83,4 @@
 		line-height: 1.4;
 		color: rgba($gray-710, .5);
 	}
-	&__{}
-} // end.sReportness
+}

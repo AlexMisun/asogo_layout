@@ -404,6 +404,20 @@ function eventHandler() {
 
 	//-
 	let sPersonalCabSlider = new Swiper('.sPersonalCab-slider-js', {
+		breakpoints: {
+			0: {
+				spaceBetween: 20,
+			},
+			768: {
+				spaceBetween: 30,
+			},
+			992: {
+				spaceBetween: 40,
+			},
+			1600: {
+				spaceBetween: 80,
+			},
+		},
 		slidesPerView: 'auto',
 		...freeMomentum,
 	});

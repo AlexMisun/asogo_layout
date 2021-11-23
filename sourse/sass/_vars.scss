@@ -323,7 +323,7 @@ $border-color: $gray-300 !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius: .25rem !default;
+$border-radius: 0;
 $border-radius-sm: .2rem !default;
 $border-radius-lg: .3rem !default;
 $border-radius-pill: 50rem !default;
@@ -784,7 +784,7 @@ $form-select-feedback-icon-size: $input-height-inner-half $input-height-inner-ha
 
 $form-select-border-width: $input-border-width !default;
 $form-select-border-color: $input-border-color !default;
-$form-select-border-radius: $border-radius !default;
+$form-select-border-radius: 0;
 $form-select-box-shadow: $box-shadow-inset !default;
 
 $form-select-focus-border-color: $input-focus-border-color !default;

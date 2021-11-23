@@ -1,0 +1,43 @@
+mixin sProfEdit(data)
+	// start sProfEdit
+	+b.SECTION.sProfEdit.section.pt-0#sProfEdit&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Редактирование профиля
+			+e.main-row.row
+				.col-lg-8.col-xl-7.col-base-6
+					+form-wrap()
+						+e.title Личные данные
+						+e.row.row
+							.col-lg-12
+								+input('Введите', 'text', 'ФИО')(value="Голоборотьков Виктор Александрович ")
+							.col-md-6
+								+input('Введите', 'text', 'Компания')(value="ПАО “Назпром”")
+							.col-md-6
+								+input('Введите', 'text', 'Должность')(value="Руководитель отдела")
+						+e.title Контакты
+						+e.row.row.pb-1
+							.col-md-6
+								+input('Введите', 'email', 'e-mail')(value="sample@sample.com")
+							.col-md-6
+								+input('Введите', 'tell', 'Телефон')(value="+7 985 999 88 88")
+						+e.checkboxes
+							+customChb('Получать уведомления на email об ответах через форму чата в ЛК')(checked)
+							+customChb('Получать новости компании на e-mail')
+						+e.btn--save(type="submit") Сохранить изменения
+				.col-lg-4.offset-base-2.offset-xl-1
+					+e.box
+						+form-wrap
+							+e.title Смена пароля
+							+e.inputs
+								+input('Введите', 'password', 'Старый пароль')
+								+input('Введите', 'password', 'Новый пароль')
+								+input('Введите', 'password', 'Повторите пароль')
+							+e.btn--pass(type="submit") Сменить пароль
+	// end sProfEdit
+
+mixin customChb(txt)
+	+b.LABEL.policy-chb--alt
+		input(type="checkbox" class="invisible")&attributes(attributes)
+		span.square
+		span.txt=txt

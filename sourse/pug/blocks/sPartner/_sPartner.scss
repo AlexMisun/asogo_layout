@@ -1,0 +1,85 @@
+// start .sPartner
+.sPartner {
+	&.bg-blue{
+		background-color: rgba($blue2, .1);
+	}
+
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(45)};
+		--sPB: #{rem(100)};
+		--sTPB: #{rem(52)};
+	}
+
+	&__row{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(40);
+		}
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(70);
+		}
+	}
+	&__txt{
+
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		p{
+			font-size: rem(14);
+			@include media-breakpoint-up(lg){
+				font-size: rem(16);
+			}
+			line-height: 1.7;
+
+			color: $gray-710;
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-outline-primary;
+		border-radius: 0;
+
+		padding: rem(10) rem(23);
+
+		font-weight: 500;
+		line-height: 1.7;
+		font-size: rem(16);
+		@include media-breakpoint-up(lg){
+			font-size: rem(20);
+		}
+	}
+	&__partners-list{
+		@include media-breakpoint-up(lg){
+			columns: 2;
+		}
+		@include media-breakpoint-up(base){
+			max-width: 83%;
+		}
+
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li{
+			margin-bottom: rem(8);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(11.5);
+			}
+
+
+			a{
+				display: inline;
+				font-size: rem(14);
+				@include media-breakpoint-up(lg){
+					font-size: rem(16);
+				}
+				line-height: 1.7;
+				color: $blue;
+			}
+		}
+	}
+	&__{}
+	&__{}
+} // end.sPartner
