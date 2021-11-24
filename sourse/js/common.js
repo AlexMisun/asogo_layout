@@ -423,7 +423,17 @@ function eventHandler() {
 	});
 	let submenuSlider = new Swiper('.submenu-slider-js', {
 		slidesPerView: 'auto',
-		spaceBetween: 46,
+		breakpoints: {
+			0: {
+				spaceBetween: 20,
+			},
+			768: {
+				spaceBetween: 30,
+			},
+			992: {
+				spaceBetween: 46,
+			},
+		},
 		...freeMomentum,
 	});
 

@@ -2,14 +2,28 @@ mixin footer()
 	+b.FOOTER.footer&attributes(attributes)
 		+e.container.container
 			+e.row.row
-				.col-6.col-md-3.col-base-2
+				.col-12.col-md-6.col-base-4
+					+e.menu
+						ul
+							li: a(href="#") Об АСОГО
+							li: a(href="#") Новости
+							li: a(href="#") Пресс-центр
+							li: a(href="#") Членство
+							li: a(href="#") СДС ИНТЕРГАЗСЕРТ
+							li: a(href="#") Членство
+							li: a(href="#") Партнеры
+							li: a(href="#") Обучение
+							li: a(href="#") Техническое регулирование и стандартизация
+							li: a(href="#") Отчетность
+							li: a(href="#") Контакты
+				//-.col-6.col-md-3.col-base-2
 					+e.menu
 						ul
 							li: a(href="#") Об АСОГО
 							li: a(href="#") Новости
 							li: a(href="#") Обучение
 							li: a(href="#") Новости
-				.col-6.col-md-3.col-base-2
+				//-.col-6.col-md-3.col-base-2
 					+e.menu
 						ul
 							li: a(href="#") Пресс-центр

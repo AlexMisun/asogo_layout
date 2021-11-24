@@ -200,6 +200,9 @@
 			}
 		}
 		.swiper-slide{
+			@include media-breakpoint-down(lg){
+				max-width: 90%;
+			}
 			@extend .col-lg-12;
 			width: auto;
 
@@ -210,9 +213,11 @@
 		}
 	}
 	&__sb-mnu-link{
+
 		display: block;
 
 		@include media-breakpoint-down(lg){
+			//font-size: rem(14);
 			&.active{
 				border-bottom:1px solid $primary;
 			}
