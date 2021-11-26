@@ -61,11 +61,23 @@
 			padding: 0;
 			margin: 0 rem(-10) 0 0;
 			list-style: none;
-
-			columns: 2;
+			@include media-breakpoint-up(xl){
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			max-height: rem(200);
+			}
+			@include media-breakpoint-down(xl){
+				display: block;
+				columns: 2;
+				// column-width: initial
+			}
+			// columns: 2;
 
 			li{
 				margin-bottom: rem(17);
+				// width: 100%;
+				// display: inline-block;
 				@include media-breakpoint-up(xxl){
 					margin-bottom: rem(21);
 				}
@@ -81,6 +93,7 @@
 						line-height: calc(22/18);
 					}
 					@include media-breakpoint-up(xxl){
+						// white-space: nowrap;
 						font-size: rem(18);
 					}
 					color: var(--footer-color, #{$gray-710});

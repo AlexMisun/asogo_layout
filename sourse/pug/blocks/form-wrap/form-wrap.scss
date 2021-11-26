@@ -1,7 +1,20 @@
 .form-wrap{
+	&__title{
+		@include rfs(24px);
+		margin-bottom: 10px;
+	}
+	&__title-sub{
+		opacity: 0.5;
+		margin-bottom: rem(34);
+	}
  	&__input-wrap{
 			// @extend .form-group;
-			
+				margin-bottom: rem(30);
+		}
+		&__input-title{
+			font-size: rem(14);
+			margin-bottom: rem(10);
+			display: block;
 		}
 		&__input{
 			// @extend .form-control;

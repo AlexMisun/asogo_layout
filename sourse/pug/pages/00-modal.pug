@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sTargets/_sTargets.pug
+include ../blocks/sControll/_sControll.pug
+include ../blocks/sContract/_sContract.pug
+include ../blocks/sMembers/_sMembers.pug
+
+block variables
+	- let  mainPage= ''
+	- let  bg='01-320.png'
+
+block title
+	- let  title= 'Модалки'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+top-nav()
+	+b.page-head
+		.container
+			+breadcrumb('АСОГО', 'Об АСОГО')
+	.section.container
+		mixin btn(t,a)
+			a.btn.btn-primary.m-2.link-modal-js(href=`#${a}`)= t
+		+btn("Доступ только для членов АСОГО",'modal-access') 
+	+footer()(class="has-bt")

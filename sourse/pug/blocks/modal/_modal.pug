@@ -2,16 +2,20 @@
 mixin modal() 
 	//  start modals
 	//a(href="modal-call").link-modal-js modal-call
-	div(id="modal-call"  style="display: none" )
+	div(id="modal-access"  style="display: none" )
 		+b.modal-win
 			+form-wrap
 				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+					+e.title Доступ только для членов АСОГО
+					+e.title-sub Пожалуйста, введите Логин и пароль для входа
 
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
-	// #modal-call
+				+input("Введите",'email','Ваш логин (e-mail)')
+				+input("Введите",'password','Пароль')
+				.row
+					.col-auto
+						button.btn.btn-lg.btn-outline-primary(type="submit"  )  Войти
+					.col-auto
+						a.btn.btn-lg.btn-link(href="#")  Забыли пароль?
+	// #modal-access
 	
 	// end modals

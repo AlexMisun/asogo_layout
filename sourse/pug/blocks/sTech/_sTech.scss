@@ -56,10 +56,10 @@
 
 		padding: rem(12) rem(10);
 		@include media-breakpoint-up(md){
-			padding: rem(20);
-			min-height: rem(184);
+			padding: rem(10) rem(24);
 		}
 		@include media-breakpoint-up(base){
+			min-height: rem(184);
 			padding: 20px 48px;
 			//min-height: rem(184);
 		}

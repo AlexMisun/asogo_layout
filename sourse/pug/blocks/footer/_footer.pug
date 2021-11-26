@@ -2,20 +2,9 @@ mixin footer()
 	+b.FOOTER.footer&attributes(attributes)
 		+e.container.container
 			+e.row.row
-				.col-12.col-md-6.col-base-4
+				.col-12.col-md
 					+e.menu
-						ul
-							li: a(href="#") Об АСОГО
-							li: a(href="#") Новости
-							li: a(href="#") Пресс-центр
-							li: a(href="#") Членство
-							li: a(href="#") СДС ИНТЕРГАЗСЕРТ
-							li: a(href="#") Членство
-							li: a(href="#") Партнеры
-							li: a(href="#") Обучение
-							li: a(href="#") Техническое регулирование и стандартизация
-							li: a(href="#") Отчетность
-							li: a(href="#") Контакты
+						+mnu()
 				//-.col-6.col-md-3.col-base-2
 					+e.menu
 						ul
@@ -30,7 +19,7 @@ mixin footer()
 							li: a(href="#") Членство
 							li: a(href="#") Сертификация
 							li: a(href="#") Партнеры
-				.col-md.text-md-end
+				.col-md-auto.text-md-end
 					div
 						+e.tell(href="tel:84953691224") 8(495) 369-12-24
 					+e.mail(href="#") office@asogo.ru
