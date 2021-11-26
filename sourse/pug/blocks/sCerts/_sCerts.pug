@@ -19,6 +19,35 @@ mixin sCerts(data)
 					+sCertsItem()
 	// end sCerts
 
+
+mixin sCerts2(data)
+	// start sCerts
+	+b.SECTION.sCerts.section.pt-0#sCerts&attributes(attributes)
+		+e.container.container
+			+e.top-row.row
+				.col-xl-4
+					p.text-secondary Действующие
+					+e.top-row.row 
+						+sCertsTopLink('Продукция', 'active')
+						+sCertsTopLink('Работы и услуги') 
+				.col-xl-4
+					p.text-secondary Приостановленные
+					+e.top-row.row 
+						+sCertsTopLink('Продукция')
+						+sCertsTopLink('Работы и услуги') 
+				.col-xl-4
+					p.text-secondary Отмененные
+					+e.top-row.row
+						+sCertsTopLink('Продукция')
+						+sCertsTopLink('Работы и услуги') 
+				//-+sCertsTopLink('')
+			+b.section-title
+				h1 Сертификаты соответствия
+			+e.items
+				-for(var i = 0; i < 5; i++)
+					+sCertsItem()
+	// end sCerts
+
 mixin sCertsItem()
 	+e.item
 		+e.title ООО «Новые технологии качества»

@@ -20,3 +20,4 @@
 1. <https://AlexMisun.github.io/asogo_layout/public/017-enter.html>
 1. <https://AlexMisun.github.io/asogo_layout/public/018-feedback.html>
 1. <https://AlexMisun.github.io/asogo_layout/public/019-prof-edit.html>
+1. <https://AlexMisun.github.io/asogo_layout/public/014-certs-1.html>
