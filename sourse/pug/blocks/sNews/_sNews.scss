@@ -173,7 +173,7 @@
 	flex-grow: 1;
 	display: block;
 	@include media-breakpoint-up(lg){
-		min-height: rem(325);
+		min-height: rem(265);
 	}
 	@include media-breakpoint-up(xxl){
 		min-height: rem(356);

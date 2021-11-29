@@ -18,7 +18,7 @@
 	&--alt{
 		//min-height: calc(var(--vh, 1vh) * 100);
 		@include media-breakpoint-up(xl){
-			min-height: 1001px;
+			min-height: 100vh;
 
 			display: flex;
 			align-items: center;
@@ -82,8 +82,9 @@
 		// justify-content: flex-end;
 		img{
 			object-fit: cover;
-			width: auto;
+			// width: auto;
 			height: 100%;
+			width: 100%;
 		}
 	}
 	.section-title{
