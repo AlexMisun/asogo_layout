@@ -27,7 +27,8 @@
 	background-color: $primary;
 	color: $white;
 
-	min-height: calc(var(--vh, 1vh) * 100);
+	// min-height: calc(var(--vh, 1vh) * 100);
+	min-height: 100vh;
 	@include media-breakpoint-up(xl){
 		//min-height: 1015px;
 	}
