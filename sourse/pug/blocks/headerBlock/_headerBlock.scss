@@ -1,6 +1,8 @@
 // start .headerBlock
 .headerBlock {
 	--sPT: calc(var(--header-h) + #{rem(24)});
+	position: relative;
+	overflow: hidden;
 
 	--sPB: #{rem(10)};
 	--sTPB: #{rem(20)};
@@ -59,28 +61,39 @@
 
 	.section-title{
 		max-width: rem(1050);
-		h1{
+	}
+	h1{
 
-			@include media-breakpoint-down(sm){
-				font-size: 40px;
+		@include media-breakpoint-down(sm){
+			font-size: 40px;
+		}
+		@include media-breakpoint-between(md,lg){
+			font-size: 56px;
+		}
+		color: $white;
+
+		span{
+			line-height: 1.05;
+			display: inline-block;
+			position: relative;
+			&::before{
+				content: '';
+				position: absolute;
+				left: 0;
+				width: 100%;
+				top: 100%;
+				// transform: ;
+				height: var(--h, 8px);
+				background-color: var(--bg, #123295);
+				// border-bottom: 1px solid $white;
 			}
-			@include media-breakpoint-between(md,lg){
-				font-size: 56px;
-			}
-			color: $white;
 
-			span{
-				line-height: 1.05;
-				display: inline-block;
-				border-bottom: 1px solid $white;
-
-				&:first-child{
-					@include media-breakpoint-up(md){
-						margin-right: 200px;
-					}
-					@include media-breakpoint-up(lg){
-						margin-right: rem(400px);
-					}
+			&:first-child{
+				@include media-breakpoint-up(md){
+					margin-right: 200px;
+				}
+				@include media-breakpoint-up(lg){
+					margin-right: rem(400px);
 				}
 			}
 		}

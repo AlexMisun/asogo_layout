@@ -37,5 +37,9 @@
 
 
   // animate
+  // header
+  --animate-start: 4s; 
+  --delay-title: calc(var(--animate-start) - .5s);
+  --delay-title-lines: calc(var(--delay-title) + .2s);
   
 }

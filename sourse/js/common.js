@@ -411,7 +411,53 @@ function eventHandler() {
 
 	// modal window
 
+	// var controller = new ScrollMagic.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
 	
+	// // build scenes
+	// new ScrollMagic.Scene({ triggerElement: ".animate-wrap" })
+	// 	.setTween(".sMembers", { y: "-100%", ease: Linear.easeNone })
+	// .addIndicators()
+	// .addTo(controller);
+
+
+	var controller = new ScrollMagic.Controller();
+
+	// define movement of panels
+	var wipeAnimation = new TimelineMax()
+		.to(".sMembers", 1, { y: "-100%", ease: Linear.easeNone }) // in from top 
+		.from(".sMembers picture", 1,{ y: "-50%", ease: Linear.easeNone, delay: -1 }) // in from top
+		.to(".sMembers .container", 1, { x: "-100vw", ease: Linear.easeNone }) // in from top
+		.to(".sMembers picture", 1, { x: "100%", ease: Linear.easeNone,  delay: -1 }) // in from top
+		// .from(".sOrganisations ", 1, {y: '-100%',ease: Linear.easeNone,  delay: -1}) // in from top
+		.from(".sOrganisations ", 1, {rotationX: 90, ease: Linear.easeNone}) // in from top
+		.from(".sOrganisations .container ", 1, { x: "100vw",ease: Linear.easeNone}); // in from top 
+
+	// create scene to pin and link animation
+	new ScrollMagic.Scene({
+		triggerElement: ".animate-wrap",
+		triggerHook: "onLeave",
+		duration: "400%"
+	})
+		.setPin(".animate-wrap")
+		.setTween(wipeAnimation)
+		// .addIndicators() // add indicators (requires plugin)
+		.addTo(controller); 
+
+ 
+	var newAnimation = new TimelineMax() 
+		.from(".sNews .container ", 1, { y: "50%", ease: Linear.easeNone}); // in from top
+
+	// create scene to pin and link animation
+	new ScrollMagic.Scene({
+		triggerElement: ".sNews",
+		triggerHook: "onLeave",
+		duration: "50%"
+	})
+		.setPin(".sNews")
+		.setTween(newAnimation)
+		// .addIndicators() // add indicators (requires plugin)
+		.addTo(controller); 
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

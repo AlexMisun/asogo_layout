@@ -25,12 +25,13 @@ block pagecontent
 	+mob-mnu()
 	+header()
 		+top-nav()
-	+headerBlock()
-	+sMembers({
-		addClasses: 'sMembers--alt',
-		bg: true,
-	})
-	+sOrganisations()
+	.animate-wrap
+		+headerBlock()
+		+sMembers({
+			addClasses: 'sMembers--alt',
+			bg: true,
+		}).bg-primary.panel-animate
+		+sOrganisations().bg-primary.panel-animate
 	+sNews()
 	+sCert()
 	+sPartner({})(class="bg-blue")

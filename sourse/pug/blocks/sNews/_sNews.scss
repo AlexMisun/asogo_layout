@@ -3,6 +3,7 @@
 	--sPT: #{rem(32)};
 	--sPB: #{rem(17)};
 	--sTPB: #{rem(20)};
+	background-color: #fff;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(47)};
 		--sPB: #{rem(30)};
@@ -15,8 +16,9 @@
 	}
 
 	&__container{
+		position: relative;
 		@include media-breakpoint-up(base){
-			padding-right: 23px;
+			// padding-right: 23px;
 		}
 	}
 

@@ -62,13 +62,24 @@
 		@include media-breakpoint-up(sm){
 			max-width: rem(249);
 		}
+		&:hover{
+			svg{
+				transform: scale(1.4);
+			}
+				--w: 100%;
+				--h: 4px;
+				--bb-col2: #{$primary};
+		}
 	}
 	&__img{
 		& > *{
 			width: rem(40);
 			height: auto;
 		}
-
+		svg{
+			transform-origin: top left;
+			@include mt;
+		}
 		//-
 		svg{
 			path,rect,circle{
@@ -90,9 +101,10 @@
 			position: absolute;
 			left: 0;
 			bottom: -1px;
-			width: 40%;
-			height: 1px;
+			width: var(--w, 40%);
+			height: var(--h, 1px);
 			background-color: var(--bb-col2, #{$blue2});
+			@include mt;
 		}
 
 	}

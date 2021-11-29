@@ -2,6 +2,7 @@
 .sOrganisations {
 	--sPT: #{rem(48)};
 	--sPB: #{rem(29px)};
+	background-color: $primary;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(105)};
 		--sPB: #{rem(56)};
