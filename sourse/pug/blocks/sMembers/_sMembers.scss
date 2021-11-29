@@ -4,6 +4,7 @@
 	--sPB: #{rem(30)};
 	--sTPB: #{rem(20)};
 	overflow: hidden;
+	min-height: calc(var(--vh, 1vh) * 100);
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(29)};
 		--sPB: #{rem(46)};
