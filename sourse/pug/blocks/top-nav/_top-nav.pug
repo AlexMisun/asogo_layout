@@ -3,11 +3,11 @@ mixin menu-toggle()
 		span
 
 mixin mob-mnu()
-	+b.menu-mobile--js
-		+b.toggle-menu-mobile--js
-			span
-		+e.inner
-			+mnu()
+	//- +b.menu-mobile--js
+	//- 	+b.toggle-menu-mobile--js
+	//- 		span
+	//- 	+e.inner
+	//- 		+mnu()
 	//  мобильное меню
 
 mixin top-nav(data)
@@ -20,8 +20,11 @@ mixin top-nav(data)
 				.col.col-lg-auto
 					+e.logo(href="#")
 						img(loading="lazy" src="img/svg/logo.svg" alt="")
-				.col.d-none.d-lg-block
-					+e.menu-wrap
+				
+				+b.menu-mobile--js.col
+					+b.toggle-menu-mobile--js
+						span
+					+e.inner
 						+mnu()
 				if data && data.isLogged
 					.col-auto

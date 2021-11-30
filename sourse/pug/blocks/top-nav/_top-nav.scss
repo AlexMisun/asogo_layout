@@ -47,12 +47,14 @@
 			height: auto;
 		}
 	}
-
-	&__menu-wrap{
+	@include media-breakpoint-up(lg){
+	.menu-mobile{
 		max-width: 700px;
+	}
 	}
 
 	//
+		@include media-breakpoint-up(lg){
 	.menu{
 		padding: 0;
 		margin: 0 0 rem(-4);
@@ -92,6 +94,7 @@
 		}
 	}
 
+	}
 	//-
 	&__ig{
 		@include media-breakpoint-down(sm){

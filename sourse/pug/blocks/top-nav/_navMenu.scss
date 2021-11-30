@@ -1,3 +1,6 @@
+	@include media-breakpoint-down(lg) {
+
+
 .toggle-menu-mobile {
 	--h: 1px;
 	--color: #{$white};
@@ -118,3 +121,5 @@
 		}
 	}
 }
+
+	} 
