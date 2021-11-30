@@ -424,13 +424,13 @@ function eventHandler() {
 
 	// define movement of panels
 	var wipeAnimation = new TimelineMax()
-		.to(".sMembers", 1, { y: "-100%", ease: Linear.easeNone }) // in from top 
-		.from(".sMembers picture", 1,{ y: "-50%", ease: Linear.easeNone, delay: -1 }) // in from top
-		.to(".sMembers .container", 1, { x: "-100vw", ease: Linear.easeNone }) // in from top
-		.to(".sMembers picture", 1, { x: "100%", ease: Linear.easeNone,  delay: -1 }) // in from top
+		.to(".animate-wrap .sMembers", 1, { y: "-100%", ease: Linear.easeNone }) // in from top
+		.from(".animate-wrap .sMembers picture", 1,{ y: "-50%", ease: Linear.easeNone, delay: -1 }) // in from top
+		.to(".animate-wrap .sMembers .container", 1, { x: "-100vw", ease: Linear.easeNone }) // in from top
+		.to(".animate-wrap .sMembers picture", 1, { x: "100%", ease: Linear.easeNone,  delay: -1 }) // in from top
 		// .from(".sOrganisations ", 1, {y: '-100%',ease: Linear.easeNone,  delay: -1}) // in from top
-		.from(".sOrganisations ", 1, {rotationX: 90, ease: Linear.easeNone}) // in from top
-		.from(".sOrganisations .container ", 1, { x: "100vw",ease: Linear.easeNone}); // in from top 
+		.from(".animate-wrap .sOrganisations ", 1, {rotationX: 90, ease: Linear.easeNone}) // in from top
+		.from(".animate-wrap .sOrganisations .container ", 1, { x: "100vw",ease: Linear.easeNone}); // in from top
 
 	// create scene to pin and link animation
 	new ScrollMagic.Scene({
@@ -445,7 +445,7 @@ function eventHandler() {
 
  
 	var newAnimation = new TimelineMax() 
-		.from(".sNews .container ", 1, { y: "50%", ease: Linear.easeNone}); // in from top
+		.from(".animate-wrap .sNews .container ", 1, { y: "50%", ease: Linear.easeNone}); // in from top
 
 	// create scene to pin and link animation
 	new ScrollMagic.Scene({
