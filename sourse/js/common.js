@@ -445,11 +445,11 @@ function eventHandler() {
 		.addTo(controller); 
 
  
-	var newAnimation = new TimelineMax() 
+ new TimelineMax() 
 		.from(".animate-wrap .sNews .container ", 1, { y: "50%", ease: Linear.easeNone}); // in from top
 
 	// create scene to pin and link animation
-	var blockScroll2 = new ScrollMagic.Scene({
+ new ScrollMagic.Scene({
 		triggerElement: ".sNews",
 		triggerHook: "onLeave",
 		duration: "50%"
