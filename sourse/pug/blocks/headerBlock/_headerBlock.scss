@@ -11,7 +11,7 @@
 	@include media-breakpoint-up(md) {
 		--sPT: calc(var(--header-h) + #{rem(75)});
 		--sPB: #{rem(67)};
-		--sTPB: #{rem(223)};
+		--sTPB: #{rem(123)};
 	}
 	@include media-breakpoint-up(xl) {
 		--sPT: calc(var(--header-h) + #{rem(40)});
@@ -19,7 +19,7 @@
 		--sTPB: #{rem(40)};
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: #{rem(200)};
+		--sPT: calc(var(--header-h) + #{rem(24)} + 5vh);
 		--sPB: #{rem(50)};
 		--sTPB: #{rem(118)};
 	}

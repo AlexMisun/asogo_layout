@@ -1,9 +1,7 @@
 "use strict";
 const JSCCommon = {
 
-	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
+	
 
 	modalCall() {
 		const link = ".link-modal-js";
@@ -56,9 +54,9 @@ const JSCCommon = {
 		if (linkModal) addData();
 	},
 	// /modalCall
-	toggleMenu() {
-		const toggle = this.btnToggleMenuMobile;
-		const menu = this.menuMobile;
+	toggleMenu() { 
+		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
+		const menu = document.querySelector(".menu-mobile--js");
 		document.addEventListener("click", function (event) {
 			const toggleEv = event.target.closest(".toggle-menu-mobile--js");
 			if (!toggleEv) return;
@@ -68,17 +66,20 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	closeMenu() {
-		let menu = this.menuMobile;
+		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
+		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		if (menu.classList.contains("active")) {
-			this.btnToggleMenuMobile.forEach(element => element.classList.remove("on"));
-			this.menuMobile.classList.remove("active");
+			toggle.forEach(element => element.classList.remove("on"));
+			menu.classList.remove("active");
 			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed")); 
 		}
 
 	},
 	mobileMenu() {
-		if (!this.menuMobileLink) return;
+		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
+		const menu = document.querySelector(".menu-mobile--js"); 
+		if (!menu) return;
 		this.toggleMenu();
 		document.addEventListener('mouseup', (event) => {
 			let container = event.target.closest(".menu-mobile--js.active"); // (1)
@@ -433,7 +434,7 @@ function eventHandler() {
 		.from(".animate-wrap .sOrganisations .container ", 1, { x: "100vw",ease: Linear.easeNone}); // in from top
 
 	// create scene to pin and link animation
-	new ScrollMagic.Scene({
+	var blockScroll = new ScrollMagic.Scene({
 		triggerElement: ".animate-wrap",
 		triggerHook: "onLeave",
 		duration: "400%"
@@ -448,7 +449,7 @@ function eventHandler() {
 		.from(".animate-wrap .sNews .container ", 1, { y: "50%", ease: Linear.easeNone}); // in from top
 
 	// create scene to pin and link animation
-	new ScrollMagic.Scene({
+	var blockScroll2 = new ScrollMagic.Scene({
 		triggerElement: ".sNews",
 		triggerHook: "onLeave",
 		duration: "50%"
@@ -458,6 +459,7 @@ function eventHandler() {
 		// .addIndicators() // add indicators (requires plugin)
 		.addTo(controller); 
 
+		
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
@@ -468,7 +470,7 @@ if (document.readyState !== 'loading') {
 
 function setActiveBody() {
 	setTimeout(() => {
-		document.body.classList.add("start-animation");
+		document.querySelector('.main-page').classList.add("start-animation");
 	}, 500);
 }
 document.addEventListener("DOMContentLoaded", () => {

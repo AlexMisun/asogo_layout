@@ -266,7 +266,7 @@ $grid-breakpoints: (xs: 0,
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px,
+  xxl: 1440px,
   base: 1800px,
 ) !default;
 // scss-docs-end grid-breakpoints
@@ -410,7 +410,7 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: rem(76);
+$h1-font-size: rem(66);
 $h2-font-size: rem(54);
 $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: $font-size-base * 1.5 !default;

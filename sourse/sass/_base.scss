@@ -138,6 +138,11 @@ body {
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
 }
+		@include media-breakpoint-up(base){
+			h1{
+				font-size: 76px;
+			}
+		}
 
 .section-title {
 	&:last-child{
@@ -880,9 +885,11 @@ body{
 		opacity: 0;
 		z-index: 2; 
 		visibility: visible;
+		height: 100vh;
 	}
 	
 	100%{
+		height: 1px;
 			opacity: 0;
 			visibility: hidden;
 		z-index: -1;
@@ -927,14 +934,42 @@ body{
 		transform: translateY(0);
 	}
 }
-
-.animate-wrap{
-	background-color: $primary;
-	.sOrganisations{
-		transform: translateY(-100%);
+	@include media-breakpoint-up(xl){
+		
+		.animate-wrap{
+			background-color: $primary;
+			.sOrganisations{
+				transform: translateY(-100%);
+			}
+			.panel-animate{
+				position: absolute !important;
+				width: 100%;
+			}
+		}
 	}
-	.panel-animate{
-		position: absolute !important;
-		width: 100%;
+	@include media-breakpoint-down(xl){
+		.scrollmagic-pin-spacer{
+			min-height: 1px  !important;
+    height: auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+		position: static !important;
+		}
+		.start-animation .sNews,
+		.animate-wrap{
+			width: 100% !important;
+			position: static !important;
+		}
+		.animate-wrap .sNews .container,
+		.animate-wrap .sOrganisations .container,
+		.animate-wrap .sOrganisations,
+		.animate-wrap .sMembers .container,
+		.animate-wrap .sMembers picture,
+		.animate-wrap .sMembers picture,
+		.animate-wrap .sMembers,
+		.sMembers .container,
+		.sMembers__bg,
+		.panel-animate{
+			transform: none !important;
+		}
 	}
-}
