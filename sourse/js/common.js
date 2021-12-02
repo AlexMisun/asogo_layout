@@ -470,7 +470,8 @@ if (document.readyState !== 'loading') {
 
 function setActiveBody() {
 	setTimeout(() => {
-		document.querySelector('.main-page').classList.add("start-animation");
+		let main = document.querySelector('.main-page');
+		if (main) main.classList.add("start-animation");
 	}, 500);
 }
 document.addEventListener("DOMContentLoaded", () => {

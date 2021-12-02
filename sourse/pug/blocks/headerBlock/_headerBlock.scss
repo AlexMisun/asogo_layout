@@ -19,9 +19,9 @@
 		--sTPB: #{rem(40)};
 	}
 	@include media-breakpoint-up(xxl){
-		--sPT: calc(var(--header-h) + #{rem(24)} + 5vh);
+		--sPT: calc(var(--header-h) + #{rem(4)} + 2vh);
 		--sPB: #{rem(50)};
-		--sTPB: calc(#{rem(68)} + 5vh);
+		--sTPB: calc(#{rem(28)} + 5vh);
 	}
 
 	background-color: $primary;
