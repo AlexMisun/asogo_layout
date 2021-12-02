@@ -434,7 +434,7 @@ function eventHandler() {
 		.from(".animate-wrap .sOrganisations .container ", 1, { x: "100vw",ease: Linear.easeNone}); // in from top
 
 	// create scene to pin and link animation
-	var blockScroll = new ScrollMagic.Scene({
+	 new ScrollMagic.Scene({
 		triggerElement: ".animate-wrap",
 		triggerHook: "onLeave",
 		duration: "400%"
@@ -445,7 +445,7 @@ function eventHandler() {
 		.addTo(controller); 
 
  
- new TimelineMax() 
+	let newAnimation = new TimelineMax()
 		.from(".animate-wrap .sNews .container ", 1, { y: "50%", ease: Linear.easeNone}); // in from top
 
 	// create scene to pin and link animation
