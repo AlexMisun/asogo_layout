@@ -21,7 +21,7 @@
 	@include media-breakpoint-up(xxl){
 		--sPT: calc(var(--header-h) + #{rem(24)} + 5vh);
 		--sPB: #{rem(50)};
-		--sTPB: #{rem(118)};
+		--sTPB: calc(#{rem(68)} + 5vh);
 	}
 
 	background-color: $primary;
