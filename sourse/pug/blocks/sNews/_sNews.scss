@@ -247,10 +247,11 @@
 	&__{}
 	&__{}
 }
-
+.sNewsCat,
 .sNews{
 .sm-news{ 
 	@include media-breakpoint-up(lg){
+		height: 100%;
 		min-height: rem(265);
 	}
 	@include media-breakpoint-up(xxl){
