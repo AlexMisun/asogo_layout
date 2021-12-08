@@ -39,7 +39,7 @@
 	}
 	&__col{
 
-		&:first-child{
+		&--main{
 			@include media-breakpoint-down(md){
 				padding-bottom: rem(16);
 			}

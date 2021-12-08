@@ -47,7 +47,7 @@
 		border-bottom: 1px solid rgba($blue2, .5);
 	}
 	&__date{
-		font-size: rem(14);
+		font-size: 14px;
 		padding-bottom: rem(16);
 		margin-bottom: rem(16);
 		@include media-breakpoint-up(lg){

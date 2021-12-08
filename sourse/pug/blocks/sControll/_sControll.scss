@@ -201,7 +201,7 @@
 			line-height: calc(8/7);
 		}
 		@include media-breakpoint-up(lg){
-			font-size: rem(14);
+			font-size: 14px;
 			line-height: calc(17/14);
 		}
 	}

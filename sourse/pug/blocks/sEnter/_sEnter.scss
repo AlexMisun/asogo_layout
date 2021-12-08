@@ -39,7 +39,7 @@
 			font-size: rem(12);
 			line-height: calc(14/12);
 			@include media-breakpoint-up(lg){
-				font-size: rem(14);
+				font-size: 14px;
 				line-height: 1.6;
 			}
 
@@ -50,7 +50,7 @@
 			border: 1px solid $white!important;
 			background-color: transparent!important;
 
-			font-size: rem(14);
+			font-size: 14px;
 			line-height: 1.6;
 
 			padding: rem(16) rem(20);
@@ -81,7 +81,7 @@
 		&__link{
 			color: $white!important;
 
-			font-size: rem(14);
+			font-size: 14px;
 			@include media-breakpoint-up(lg){
 				font-size: rem(16);
 			}

@@ -117,7 +117,7 @@
 				color: $gray-710;
 			}
 			p:last-child{
-				font-size: rem(14);
+				font-size: 14px;
 				line-height: 1.6;
 				@include media-breakpoint-up(lg){
 					font-size: rem(16);

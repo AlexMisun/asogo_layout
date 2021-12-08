@@ -131,7 +131,7 @@
 			font-weight: 500;
 			line-height: 1.5;
 
-			font-size: rem(14);
+			font-size: 14px;
 			@include media-breakpoint-up(md){
 				font-size: rem(16);
 			}
@@ -244,7 +244,7 @@
 	&__g-col{
 		&--icon{
 			.icon{
-				font-size: rem(14);
+				font-size: 14px;
 				color: $primary;
 			}
 		}
@@ -254,7 +254,7 @@
 	}
 	&__gray{
 		margin-bottom: rem(7);
-		font-size: rem(14);
+		font-size: 14px;
 		line-height: calc(17/14);
 
 		color: $gray-710;

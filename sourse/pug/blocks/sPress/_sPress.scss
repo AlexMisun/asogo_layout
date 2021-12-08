@@ -132,7 +132,7 @@
 			}
 		}
 		&--txt{
-			font-size: rem(14);
+			font-size: 14px;
 			@include media-breakpoint-up(lg){
 				font-size: rem(16);
 			}
@@ -165,7 +165,7 @@
 		&--txt{}
 	}
 	&__c-title{
-		font-size: rem(14);
+		font-size: 14px;
 		line-height: calc(17/14);
 		color: $gray-710;
 

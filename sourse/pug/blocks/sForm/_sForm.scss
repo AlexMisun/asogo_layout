@@ -114,7 +114,7 @@
 			font-size: rem(12);
 			line-height: calc(14/12);
 			@include media-breakpoint-up(lg){
-				font-size: rem(14);
+				font-size: 14px;
 				line-height: calc(17/14);
 			}
 
@@ -122,7 +122,7 @@
 		}
 		&__input{
 			padding: rem(13) rem(16);
-			font-size: rem(14);
+			font-size: 14px;
 			line-height: 1.6;
 			@include media-breakpoint-up(lg){
 				padding: rem(10.5) rem(16);

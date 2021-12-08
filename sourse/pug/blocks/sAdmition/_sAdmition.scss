@@ -153,7 +153,7 @@
 		font-size: rem(12);
 		line-height: calc(14/12);
 		@include media-breakpoint-up(lg){
-			font-size: rem(14);
+			font-size: 14px;
 			line-height: calc(17/14);
 		}
 

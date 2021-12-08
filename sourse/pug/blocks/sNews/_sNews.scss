@@ -140,7 +140,7 @@
 		@include media-breakpoint-up(md){
 			margin-bottom: rem(18);
 		}
-		font-size: rem(14);
+		font-size: 14px;
 		@include media-breakpoint-up(lg){
 			margin-bottom: rem(23);
 			font-size: rem(16);
@@ -172,12 +172,12 @@
 .sm-news{
 	flex-grow: 1;
 	display: block;
-	@include media-breakpoint-up(lg){
-		// min-height: rem(265);
-	}
-	@include media-breakpoint-up(xxl){
-		// min-height: rem(356);
-	}
+	// @include media-breakpoint-up(lg){
+	// 	min-height: rem(265);
+	// }
+	// @include media-breakpoint-up(xxl){
+	// 	min-height: rem(356);
+	// }
 
 	background: rgba($blue2, .2);
 	&:hover{
@@ -217,7 +217,7 @@
 			margin-bottom: rem(24);
 			padding-bottom: rem(24);
 		}
-		font-size: rem(14);
+		font-size: 14px;
 		@include media-breakpoint-up(lg){
 			font-size: rem(16);
 		}
@@ -246,4 +246,15 @@
 	}
 	&__{}
 	&__{}
+}
+
+.sNews{
+.sm-news{ 
+	@include media-breakpoint-up(lg){
+		min-height: rem(265);
+	}
+	@include media-breakpoint-up(xxl){
+		min-height: rem(356);
+	}
+}
 }

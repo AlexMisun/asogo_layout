@@ -105,7 +105,7 @@
 		a{
 			display: inline-block;
 
-			font-size: rem(14);
+			font-size: 14px;
 			@include media-breakpoint-up(lg){
 				font-size: rem(16);
 			}
@@ -172,7 +172,7 @@
 
 		font-size: rem(12);
 		@include media-breakpoint-up(md){
-			font-size: rem(14);
+			font-size: 14px;
 		}
 		@include media-breakpoint-up(lg){
 			font-size: rem(16);
@@ -217,7 +217,7 @@
 		display: block;
 
 		@include media-breakpoint-down(lg){
-			//font-size: rem(14);
+			//font-size: 14px;
 			&.active{
 				border-bottom:1px solid $primary;
 			}
@@ -285,7 +285,7 @@
 
 			font-size: rem(12);
 			@include media-breakpoint-up(lg){
-				font-size: rem(14);
+				font-size: 14px;
 			}
 
 			line-height: 1.6;
@@ -303,7 +303,7 @@
 
 			color: $primary;
 
-			font-size: rem(14);
+			font-size: 14px;
 			@include media-breakpoint-up(xl){
 				font-size: rem(16);
 			}

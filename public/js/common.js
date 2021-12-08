@@ -459,7 +459,11 @@ function eventHandler() {
 		// .addIndicators() // add indicators (requires plugin)
 		.addTo(controller); 
 
-		
+	$(document).on('click', ".accordion-block__head", function(){
+		$(this).next().slideToggle(function(){
+			$(this).parent().toggleClass("active");
+		})
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
