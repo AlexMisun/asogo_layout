@@ -23,7 +23,8 @@
 		}
 		img{
 			border-radius: rem(4);
-			width: 100%;
+			// width: 100%;
+			max-width: 100%;
 			height: auto;
 
 			margin-bottom: rem(24);
