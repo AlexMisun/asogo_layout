@@ -1,0 +1,84 @@
+// start .sParticipants
+.sParticipants {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		table{
+			width: 100%;
+			font-size: 14px;
+
+		}
+		thead{
+			th{
+				border-bottom: 2px solid #123295;
+			}
+		}
+		@include media-breakpoint-up(xxl) {
+		--spr: 45px;
+	}
+	--spr: 15px;
+		td,
+		th{
+			padding: rem(20) 0;
+			vertical-align: top;
+			&:not(:last-child){ 
+				padding-right: var(--spr);
+			}
+		}
+		@include media-breakpoint-up(lg) {
+		tbody{
+			tr:not(:last-child) {
+				td{
+					border-bottom: 1px solid #9FB1E8;
+				}
+			}
+
+				td{
+					&:nth-child(1) {
+						width: calc(192px + var(--spr));
+					}
+					&:nth-child(2) {
+						width: calc(178px + var(--spr));
+						// width: 190px;
+					}
+				}
+			}
+		}
+
+		@include media-breakpoint-down(lg) {
+			table,
+			tbody,
+			tr,
+			td{
+				display: block;
+				width: 100%;
+			}
+			thead{
+				display: none;
+			}
+			tr{
+				padding: rem(10) 0;
+			}
+			tr:not(:last-child) { 
+					border-bottom: 1px solid #9FB1E8; 
+			}
+			td{
+				padding-bottom: 0;
+				padding-top: 0;
+				&::before{
+					content: attr(data-title);
+					display: block;
+					opacity: 0.5;
+				}
+			}
+
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sParticipants

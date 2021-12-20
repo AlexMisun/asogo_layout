@@ -1,0 +1,30 @@
+mixin sParticipants(data)
+	// start sParticipants
+	+b.sParticipants.section&attributes(attributes)
+		.container
+			table
+				thead
+					tr 
+						th Краткое наименование организации
+						th Юридический адрес
+						th Краткое наименование ОС
+						th Направление деятельности ОС
+						th Рег. номер свидетельства ОС
+						th Контактная информация ОС
+						th Примечание
+				tbody
+					- for (var x = 0; x < 6; x++)
+						tr
+							td(data-title="Краткое наименование организации") 
+								a(href="#modal-info").link-modal-js НОУ «СЦ «ВНИИГАЗ-Сертификат» 
+							td(data-title="Юридический адрес")  Российская Федерация, 142717, Московская обл., Ленинский р-он, пос. Развилка, ВНИИГАЗ
+							td(data-title="Краткое наименование ОС")  ОС СМК НОУ «СЦ «ВНИИГАЗ-Сертификат»
+							td(data-title="Направление деятельности ОС")  система менеджмента качества
+							td(data-title="Рег. номер свидетельства ОС")  ОГН1.RU.1409
+							td(data-title="Контактная информация ОС")  
+								a.text-body(href="tel:+7(498)657-45-18") +7(498)657-45-18
+								| ;
+								br
+								a.text-body(href="mailto:info@vniigaz-cert.ru") info@vniigaz-cert.ru
+							td(data-title="Примечание")  -
+	// end sParticipants

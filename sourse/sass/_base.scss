@@ -715,6 +715,22 @@ iframe {
 	//
 	&__{}
 	&__{}
+
+	&__links{
+		display: flex;
+		@include roww(#{rem(56)});
+		flex-wrap: wrap;
+		list-style: none;
+		li{
+			margin-bottom: rem(18);
+		}
+		a{
+			font-size: rem(20);
+			&.active{
+				color: #575757;
+			}
+		}
+	}
 }
 
 .breadcrumb-wrap{
