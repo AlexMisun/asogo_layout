@@ -14,17 +14,17 @@ mixin sParticipants(data)
 						th Примечание
 				tbody
 					- for (var x = 0; x < 6; x++)
-						tr
+						tr(data-fancybox data-src="#modal-info")
 							td(data-title="Краткое наименование организации") 
-								a(href="#modal-info").link-modal-js НОУ «СЦ «ВНИИГАЗ-Сертификат» 
+								a(href="#")   НОУ «СЦ «ВНИИГАЗ-Сертификат» 
 							td(data-title="Юридический адрес")  Российская Федерация, 142717, Московская обл., Ленинский р-он, пос. Развилка, ВНИИГАЗ
 							td(data-title="Краткое наименование ОС")  ОС СМК НОУ «СЦ «ВНИИГАЗ-Сертификат»
 							td(data-title="Направление деятельности ОС")  система менеджмента качества
 							td(data-title="Рег. номер свидетельства ОС")  ОГН1.RU.1409
 							td(data-title="Контактная информация ОС")  
-								a.text-body(href="tel:+7(498)657-45-18") +7(498)657-45-18
-								| ;
+								| +7(498)657-45-18
+								| ; 
 								br
-								a.text-body(href="mailto:info@vniigaz-cert.ru") info@vniigaz-cert.ru
+								|info@vniigaz-cert.ru
 							td(data-title="Примечание")  -
 	// end sParticipants
