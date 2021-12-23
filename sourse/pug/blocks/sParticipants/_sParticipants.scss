@@ -3,6 +3,39 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+		&__head{
+			position: relative;
+			padding-top: 16px;
+			padding-bottom: 16px;
+			margin-bottom: 10px;
+			z-index: 2;
+			.col-title{
+				margin-right: 30px;
+			}
+			&::before{
+				content: '';
+				position: absolute;
+				left: -100vw;
+				width: 300vw;
+				position: absolute;
+				height: 100%;
+				background: #EBF0FF;
+				z-index: -1;
+				top: 0;
+			}
+			.form-select{
+				width: 272px;
+				border: 1px solid #9FB1E8;
+				border-radius: 4px;
+				height: auto;
+				padding-top: 9px;
+				padding-bottom: 9px;
+
+			}
+			.row{
+				align-items: center;
+			}
+		}
 		table{
 			width: 100%;
 			font-size: 14px;

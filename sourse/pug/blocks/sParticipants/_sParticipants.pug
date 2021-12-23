@@ -2,6 +2,11 @@ mixin sParticipants(data)
 	// start sParticipants
 	+b.sParticipants.section&attributes(attributes)
 		.container
+			+e.head
+				.row
+					.col-title.col-auto Статус участников
+					.col-auto
+						+input('Действующие',"select")
 			table
 				thead
 					tr 
