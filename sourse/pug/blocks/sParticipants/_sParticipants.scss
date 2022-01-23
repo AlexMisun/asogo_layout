@@ -58,7 +58,7 @@
 				padding-right: var(--spr);
 			}
 		}
-		@include media-breakpoint-up(lg) {
+		// @include media-breakpoint-up(lg) {
 		tbody{
 			tr:not(:last-child) {
 				td{
@@ -77,7 +77,7 @@
 					}
 				}
 			}
-		}
+		// }
 		tr{
 			position: relative;
 			&:hover{
@@ -97,34 +97,34 @@
 			// 	height: 100%;
 			// }
 		}
-		@include media-breakpoint-down(lg) {
-			table,
-			tbody,
-			tr,
-			td{
-				display: block;
-				width: 100%;
-			}
-			thead{
-				display: none;
-			}
-			tr{
-				padding: rem(10) 0;
-			}
-			tr:not(:last-child) { 
-					border-bottom: 1px solid #9FB1E8; 
-			}
-			td{
-				padding-bottom: 0;
-				padding-top: 0;
-				&::before{
-					content: attr(data-title);
-					display: block;
-					opacity: 0.5;
-				}
-			}
+		// @include media-breakpoint-down(lg) {
+		// 	table,
+		// 	tbody,
+		// 	tr,
+		// 	td{
+		// 		display: block;
+		// 		width: 100%;
+		// 	}
+		// 	thead{
+		// 		display: none;
+		// 	}
+		// 	tr{
+		// 		padding: rem(10) 0;
+		// 	}
+		// 	tr:not(:last-child) { 
+		// 			border-bottom: 1px solid #9FB1E8; 
+		// 	}
+		// 	td{
+		// 		padding-bottom: 0;
+		// 		padding-top: 0;
+		// 		&::before{
+		// 			content: attr(data-title);
+		// 			display: block;
+		// 			opacity: 0.5;
+		// 		}
+		// 	}
 
-		}
+		// }
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -134,3 +134,12 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sParticipants
+
+.table-wrap{
+	position: relative;
+	overflow-y: hidden;
+	overflow-x: auto;
+	table{
+		min-width: calc(1310px - #{$grid-gutter-width});
+	}
+}
