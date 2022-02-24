@@ -160,13 +160,15 @@ body {
 	}
 
 	h1{
-		@include media-breakpoint-down(lg){
-			font-size: rem(40);
+		@include media-breakpoint-up(lg){
+			// font-size: rem(40);
+			font-size: rem(66);
 		}
 	}
 	h2{
-		@include media-breakpoint-down(lg){
-			font-size: rem(32)!important;
+		@include media-breakpoint-up(lg){
+			// font-size: rem(32)!important;
+			font-size: rem(54);
 		}
 	}
 
