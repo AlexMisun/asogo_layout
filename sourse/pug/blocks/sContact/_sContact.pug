@@ -30,8 +30,48 @@ mixin sContact()
 							txt: '8(495) 369-12-24',
 						})
 				.col-xl-6
-					+e.map
-						.make-yandex-lazy-js(data-src="<script async src=\"https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afc5326583a0d0f770f3e89e8147b5939536e33547093787f00f2944799db44a3&amp;width=1080&amp;height=518&amp;lang=ru_RU&amp;scroll=false\"></script>")
+					<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+					script.
+						function init () {
+							var myMap,  myPlacemark2;
+							let mapCenter = [55.67350906906321,37.50380949999997],
+									markIcon = 'img/svg/mapMark.svg';
+							// console.log(mapCenter);
+							// Создание экземпляра карты и его привязка к контейнеру с
+							// заданным id ("map").
+							myMap = new ymaps.Map(`map`, {
+									// При инициализации карты обязательно нужно указать
+									// её центр и коэффициент масштабирования.
+									center: mapCenter, // Москва
+									zoom:16,
+									
+								});
+								var myPlacemark = new ymaps.Placemark(mapCenter, {
+									// Свойства.
+									// Содержимое иконки, балуна и хинта.
+									hintContent: '',
+									balloonContent: '',
+								}, {
+									hideIconOnBalloonOpen: false,
+									iconLayout: 'default#image',
+									iconImageHref: markIcon,
+									iconImageSize: [92, 45],
+									iconImageOffset: [-46, -45]
+								});
+								console.log(myPlacemark2);
+								myMap.geoObjects.add(myPlacemark);
+								myMap.behaviors.disable('scrollZoom');
+								//на мобильных устройствах... (проверяем по userAgent браузера)
+								if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+									// ... отключаем перетаскивание карты
+									myMap.behaviors.disable('drag');
+								}
+							};
+						ymaps.ready(init);
+
+					+e.map#map
+
+						//- .make-yandex-lazy-js(data-src="<script async src=\"https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afc5326583a0d0f770f3e89e8147b5939536e33547093787f00f2944799db44a3&amp;width=1080&amp;height=518&amp;lang=ru_RU&amp;scroll=false\"></script>")
 	// end sContact
 
 mixin sContactItem(data)

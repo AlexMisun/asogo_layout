@@ -140,9 +140,47 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-6">
-							<div class="sContact__map">
-								<div class="make-yandex-lazy-js" data-src="&lt;script async src=&quot;https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afc5326583a0d0f770f3e89e8147b5939536e33547093787f00f2944799db44a3&amp;amp;width=1080&amp;amp;height=518&amp;amp;lang=ru_RU&amp;amp;scroll=false&quot;&gt;&lt;/script&gt;"></div>
+						<div class="col-xl-6"><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+							<script>
+								function init () {
+									var myMap,  myPlacemark2;
+									let mapCenter = [55.67350906906321,37.50380949999997],
+											markIcon = 'img/svg/mapMark.svg';
+									// console.log(mapCenter);
+									// Создание экземпляра карты и его привязка к контейнеру с
+									// заданным id ("map").
+									myMap = new ymaps.Map(`map`, {
+											// При инициализации карты обязательно нужно указать
+											// её центр и коэффициент масштабирования.
+											center: mapCenter, // Москва
+											zoom:16,
+											
+										});
+										var myPlacemark = new ymaps.Placemark(mapCenter, {
+											// Свойства.
+											// Содержимое иконки, балуна и хинта.
+											hintContent: '',
+											balloonContent: '',
+										}, {
+											hideIconOnBalloonOpen: false,
+											iconLayout: 'default#image',
+											iconImageHref: markIcon,
+											iconImageSize: [92, 45],
+											iconImageOffset: [-46, -45]
+										});
+										console.log(myPlacemark2);
+										myMap.geoObjects.add(myPlacemark);
+										myMap.behaviors.disable('scrollZoom');
+										//на мобильных устройствах... (проверяем по userAgent браузера)
+										if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+											// ... отключаем перетаскивание карты
+											myMap.behaviors.disable('drag');
+										}
+									};
+								ymaps.ready(init);
+								
+							</script>
+							<div class="sContact__map" id="map">
 							</div>
 						</div>
 					</div>
@@ -224,11 +262,19 @@
 						</div>
 						<div class="col-md-auto text-md-end">
 							<div>
+								<p class="text-secondary">по вопросам сертификации: </p>
 								<a class="footer__tell" href="tel:84953691224">8(495) 369-12-24
+								</a><br/>
+								<a class="footer__mail" href="#">office@asogo.ru 
 								</a>
 							</div>
-							<a class="footer__mail" href="#">office@asogo.ru
-							</a>
+							<div>
+								<p class="text-secondary">по общим вопросам:</p>
+								<a class="footer__tell" href="tel:8(495)369-95-44">8 (495) 369-95-44
+								</a><br/>
+								<a class="footer__mail" href="#">office@asogo.ru
+								</a>
+							</div>
 							<div class="footer__address">119415, г. Москва, проспект Вернадского, д. 41, стр. 1
 							</div>
 						</div>
@@ -281,6 +327,83 @@
 			</div>
 		</div>
 		<!-- #modal-access-->
+		<div id="modal-info" style="display: none">
+			<div class="modal-win modal-win--info">
+				<div class="info-item">
+					<div class="info-item__title">Полное наименование организации
+					</div>
+					<p>Некоммерческая организация учреждение «Сертификационный центр «ВНИИГАЗ -Сертификат»
+					</p>
+				</div>
+				<div class="info-item">
+					<div class="info-item__title">Краткое наименование организации
+					</div>
+					<p>НОУ «СЦ «ВНИИГАЗ-Сертификат»
+					</p>
+				</div>
+				<div class="info-item">
+					<div class="info-item__title">Юридический адрес
+					</div>
+					<p>Российская Федерация, 142717, Московская обл., Ленинский р-он, пос. Развилка, ВНИИГАЗ
+					</p>
+				</div>
+				<div class="info-item">
+					<div class="info-item__title">Полное наименование органа по сертификации (ОС)
+					</div>
+					<p>Орган по сертификации СМК НОУ «СЦ «ВНИИГАЗ-Сертификат»
+					</p>
+				</div>
+				<div class="info-item">
+					<div class="info-item__title">Краткое наименование ОС
+					</div>
+					<p>ОС СМК НОУ «СЦ «ВНИИГАЗ-Сертификат»
+					</p>
+				</div>
+				<div class="info-item">
+					<div class="info-item__title">Направление деятельности ОС
+					</div>
+					<p>система менеджмента качества
+					</p>
+				</div>
+				<div class="info-item">
+					<div class="info-item__title">Руководитель ОС
+					</div>
+					<p>система менеджмента качества
+					</p>
+				</div>
+				<div class="info-item">
+					<div class="info-item__title">Рег. номер свидетельства ОС
+					</div>
+					<p>система менеджмента качества
+					</p>
+				</div>
+				<div class="info-item">
+					<div class="info-item__title">Срок действия свидетельства ОС
+					</div>
+					<p>ОС СМК НОУ «СЦ «ВНИИГАЗ-Сертификат»
+					</p>
+				</div>
+				<div class="info-item">
+					<div class="info-item__title">Контактная информация ОС
+					</div>
+					<p><a class="text-body" href="tel:+7(498)657-45-18">+7(498)657-45-18</a>;<br/><a class="text-body" href="mailto:info@vniigaz-cert.ru">info@vniigaz-cert.ru</a>
+					</p>
+				</div>
+				<div class="info-item">
+					<div class="info-item__title">ЦОС
+					</div>
+					<p>Системы менеджмента (рег. № ОГН1)
+					</p>
+				</div>
+				<div class="info-item">
+					<div class="info-item__title">Примечание
+					</div>
+					<p>-
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-info-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
